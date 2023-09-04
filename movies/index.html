@@ -565,9 +565,7 @@
     <div class="col s10 offset-s1 m8 offset-m2 l8 offset-l2">
         <div class="brand">
             <div class="title center-align">
-                
-                JunDecNoの博客
-                
+                 JunDecNoの博客 
             </div>
 
             <div class="description center-align">
@@ -576,7 +574,7 @@
                 <script src="/libs/typed/typed.js"></script>
                 <script>
                     var typed = new Typed("#subtitle", {
-                        strings: [ 
+                        strings: [
                             
                                 "从来没有真正的绝境, 只有心灵的迷途",
                             
@@ -599,8 +597,30 @@
 
 <script>
     // 每天切换 banner 图.  Switch banner image every day.
-    var bannerUrl = "/medias/banner/" + new Date().getDay() + '.jpg';
-    $('.bg-cover').css('background-image', 'url(' + bannerUrl + ')');
+    var bannerUrl ="https://s1.ax1x.com/2023/09/04/pPDOrU1.jpg";
+    switch (new Date().getDay()) {
+        case 0:
+            bannerUrl = "https://s1.ax1x.com/2023/09/04/pPDOrU1.jpg";
+            break;
+        case 1:
+            bannerUrl = "https://s1.ax1x.com/2023/09/04/pPDODER.jpg";
+            break;
+        case 2:
+            bannerUrl = "https://s1.ax1x.com/2023/09/04/pPDOs4x.jpg";
+            break;
+        case 3:
+            bannerUrl = "https://s1.ax1x.com/2023/09/04/pPDOfDH.png";
+            break;
+        case 4:
+            bannerUrl = "https://s1.ax1x.com/2023/09/04/pPDO5VA.png";
+            break;
+        case 5:
+            bannerUrl = "https://s1.ax1x.com/2023/09/04/pPDOhbd.png";
+        default:
+            bannerUrl = "https://s1.ax1x.com/2023/09/04/pPDO6C6.jpg";
+            break;
+    }
+    $(".bg-cover").css("background-image", "url(" + bannerUrl + ")");
 </script>
 
 
@@ -879,7 +899,7 @@
                             yearsAndDaysTip;
                     }
                 };
-                calcSiteTime();
+                setInterval("calcSiteTime()", "1000");
             </script>
             
             <br />
