@@ -4,8 +4,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="15-U-Net 用于生物医学图像分割的卷积网络, JunDecNo">
-    <meta name="description" content="关于U-Net的阅读笔记">
+    <meta name="keywords" content="12-GLPocket：蛋白质结合位点预测的多尺度表示学习方法, JunDecNo">
+    <meta name="description" content="关于GLPocket的阅读理解">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -17,9 +17,9 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>15-U-Net 用于生物医学图像分割的卷积网络 | JunDecNo</title>
+    <title>12-GLPocket：蛋白质结合位点预测的多尺度表示学习方法 | JunDecNo</title>
     <link rel="icon" type="image/png" href="https://s2.loli.net/2023/08/26/XWj3sUKFErVQOwd.png">
-    <link rel="stylesheet" type="text/css" href="/css/loading.css">
+    <link rel="stylesheet" type="text/css" href="../css/loading.css">
 
     
 
@@ -28,31 +28,31 @@
 
 
 
-<link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.min.css">
-<link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
-<link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
-<link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
-<link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
-<link rel="stylesheet" type="text/css" href="/css/matery.css">
-<link rel="stylesheet" type="text/css" href="/css/my.css">
-<link rel="stylesheet" type="text/css" href="/css/dark.css" media="none" onload="if(media!='all')media='all'">
+<link rel="stylesheet" type="text/css" href="../libs/awesome/css/all.min.css">
+<link rel="stylesheet" type="text/css" href="../libs/materialize/materialize.min.css">
+<link rel="stylesheet" type="text/css" href="../libs/aos/aos.css">
+<link rel="stylesheet" type="text/css" href="../libs/animate/animate.min.css">
+<link rel="stylesheet" type="text/css" href="../libs/lightGallery/css/lightgallery.min.css">
+<link rel="stylesheet" type="text/css" href="../css/matery.css">
+<link rel="stylesheet" type="text/css" href="../css/my.css">
+<link rel="stylesheet" type="text/css" href="../css/dark.css" media="none" onload="if(media!='all')media='all'">
 
 
 
 
-    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
-    <link rel="stylesheet" href="/css/post.css">
+    <link rel="stylesheet" href="../libs/tocbot/tocbot.css">
+    <link rel="stylesheet" href="../css/post.css">
 
 
 
 
     
-        <link rel="stylesheet" type="text/css" href="/css/reward.css">
+        <link rel="stylesheet" type="text/css" href="../css/reward.css">
     
 
 
 
-    <script src="/libs/jquery/jquery-3.6.0.min.js"></script>
+    <script src="../libs/jquery/jquery-3.6.0.min.js"></script>
 
 <meta name="generator" content="Hexo 6.2.0">
 <style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
@@ -88,7 +88,7 @@
     <nav id="headNav" class="bg-color nav-transparent">
         <div id="navContainer" class="nav-wrapper container">
             <div class="brand-logo">
-                <a href="/" class="waves-effect waves-light">
+                <a href="../index.html" class="waves-effect waves-light">
                     
                     <img src="https://s2.loli.net/2023/08/26/XWj3sUKFErVQOwd.png" class="logo-img" alt="LOGO">
                     
@@ -102,7 +102,7 @@
   
   <li class="hide-on-med-and-down nav-item">
     
-    <a href="/" class="waves-effect waves-light">
+    <a href="../index.html" class="waves-effect waves-light">
       
       <i class="fas fa-home" style="zoom: 0.6;"></i>
       
@@ -124,7 +124,7 @@
     <ul class="sub-nav menus_item_child ">
       
       <li>
-        <a href="/tools/index.html">
+        <a href="../tools/index.html">
           
           <i class="fa fa-box" style="margin-top: -20px; zoom: 0.6;"></i>
           
@@ -158,7 +158,7 @@
     <ul class="sub-nav menus_item_child ">
       
       <li>
-        <a href="/tags">
+        <a href="../tags">
           
           <i class="fas fa-tags" style="margin-top: -20px; zoom: 0.6;"></i>
           
@@ -167,7 +167,7 @@
       </li>
       
       <li>
-        <a href="/categories">
+        <a href="../categories">
           
           <i class="fas fa-bookmark" style="margin-top: -20px; zoom: 0.6;"></i>
           
@@ -176,7 +176,7 @@
       </li>
       
       <li>
-        <a href="/archives">
+        <a href="../archives">
           
           <i class="fas fa-archive" style="margin-top: -20px; zoom: 0.6;"></i>
           
@@ -201,7 +201,7 @@
     <ul class="sub-nav menus_item_child ">
       
       <li>
-        <a href="/musics">
+        <a href="../musics">
           
           <i class="fas fa-music" style="margin-top: -20px; zoom: 0.6;"></i>
           
@@ -210,7 +210,7 @@
       </li>
       
       <li>
-        <a href="/movies">
+        <a href="../movies">
           
           <i class="fas fa-film" style="margin-top: -20px; zoom: 0.6;"></i>
           
@@ -219,7 +219,7 @@
       </li>
       
       <li>
-        <a href="/books">
+        <a href="../books">
           
           <i class="fas fa-book" style="margin-top: -20px; zoom: 0.6;"></i>
           
@@ -244,7 +244,7 @@
     <ul class="sub-nav menus_item_child ">
       
       <li>
-        <a href="/about">
+        <a href="../about">
           
           <i class="fas fa-user-circle" style="margin-top: -20px; zoom: 0.6;"></i>
           
@@ -253,7 +253,7 @@
       </li>
       
       <li>
-        <a href="/contact">
+        <a href="../contact">
           
           <i class="fas fa-comments" style="margin-top: -20px; zoom: 0.6;"></i>
           
@@ -262,7 +262,7 @@
       </li>
       
       <li>
-        <a href="/friends">
+        <a href="../friends">
           
           <i class="fas fa-address-book" style="margin-top: -20px; zoom: 0.6;"></i>
           
@@ -305,7 +305,7 @@
         
         <li class="m-nav-item">
 	  
-		<a href="/" class="waves-effect waves-light">
+		<a href="../index.html" class="waves-effect waves-light">
 			
 			    <i class="fa-fw fas fa-home"></i>
 			
@@ -327,7 +327,7 @@
               
                 <li>
 
-                  <a href="/tools/index.html " style="margin-left:50px">
+                  <a href="../tools/index.html " style="margin-left:50px">
 				  
 				   <i class="fa fa fa-box" style="position: absolute;left:28px" ></i>
 			      
@@ -362,7 +362,7 @@
               
                 <li>
 
-                  <a href="/tags " style="margin-left:50px">
+                  <a href="../tags " style="margin-left:50px">
 				  
 				   <i class="fa fas fa-tags" style="position: absolute;left:28px" ></i>
 			      
@@ -372,7 +372,7 @@
               
                 <li>
 
-                  <a href="/categories " style="margin-left:50px">
+                  <a href="../categories " style="margin-left:50px">
 				  
 				   <i class="fa fas fa-bookmark" style="position: absolute;left:28px" ></i>
 			      
@@ -382,7 +382,7 @@
               
                 <li>
 
-                  <a href="/archives " style="margin-left:50px">
+                  <a href="../archives " style="margin-left:50px">
 				  
 				   <i class="fa fas fa-archive" style="position: absolute;left:28px" ></i>
 			      
@@ -407,7 +407,7 @@
               
                 <li>
 
-                  <a href="/musics " style="margin-left:50px">
+                  <a href="../musics " style="margin-left:50px">
 				  
 				   <i class="fa fas fa-music" style="position: absolute;left:28px" ></i>
 			      
@@ -417,7 +417,7 @@
               
                 <li>
 
-                  <a href="/movies " style="margin-left:50px">
+                  <a href="../movies " style="margin-left:50px">
 				  
 				   <i class="fa fas fa-film" style="position: absolute;left:28px" ></i>
 			      
@@ -427,7 +427,7 @@
               
                 <li>
 
-                  <a href="/books " style="margin-left:50px">
+                  <a href="../books " style="margin-left:50px">
 				  
 				   <i class="fa fas fa-book" style="position: absolute;left:28px" ></i>
 			      
@@ -452,7 +452,7 @@
               
                 <li>
 
-                  <a href="/about " style="margin-left:50px">
+                  <a href="../about " style="margin-left:50px">
 				  
 				   <i class="fa fas fa-user-circle" style="position: absolute;left:28px" ></i>
 			      
@@ -462,7 +462,7 @@
               
                 <li>
 
-                  <a href="/contact " style="margin-left:50px">
+                  <a href="../contact " style="margin-left:50px">
 				  
 				   <i class="fa fas fa-comments" style="position: absolute;left:28px" ></i>
 			      
@@ -472,7 +472,7 @@
               
                 <li>
 
-                  <a href="/friends " style="margin-left:50px">
+                  <a href="../friends " style="margin-left:50px">
 				  
 				   <i class="fa fas fa-address-book" style="position: absolute;left:28px" ></i>
 			      
@@ -563,12 +563,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://s2.loli.net/2023/09/07/dnRj8ygSwaQoPBc.png')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://s2.loli.net/2023/12/14/opIifjZvcdPg1Ve.png')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">15-U-Net 用于生物医学图像分割的卷积网络</h1>
+                    <h1 class="description center-align post-title">12-GLPocket：蛋白质结合位点预测的多尺度表示学习方法</h1>
                 </div>
             </div>
         </div>
@@ -592,11 +592,11 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/">
+                            <a href="../tags/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/">
                                 <span class="chip bg-color">论文阅读</span>
                             </a>
                         
-                            <a href="/tags/PLIS/">
+                            <a href="../tags/PLIS/">
                                 <span class="chip bg-color">PLIS</span>
                             </a>
                         
@@ -608,7 +608,7 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E7%A7%91%E7%A0%94%E8%AE%BA%E6%96%87/" class="post-category">
+                            <a href="../categories/%E7%A7%91%E7%A0%94%E8%AE%BA%E6%96%87/" class="post-category">
                                 科研论文
                             </a>
                         
@@ -621,28 +621,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2023-12-15
+                    2023-12-14
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2023-12-15
+                    2023-12-14
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.4k
+                    1.2k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    5 分
+                    4 分
                 </div>
                 
 
@@ -662,44 +662,56 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>文章地址: <a target="_blank" rel="noopener" href="https://link.springer.com/chapter/10.1007/978-3-319-24574-4_28">U-Net: Convolutional Networks for Biomedical Image Segmentation | SpringerLink</a></p>
-<p><a href="#%E6%91%98%E8%A6%81%20Abstract">摘要</a><br><a href="#%E4%BB%8B%E7%BB%8D%20Introduction">介绍</a><br><a href="#%E6%9D%90%E6%96%99%E5%92%8C%E6%96%B9%E6%B3%95%20Materials%20and%20Methods">材料和方法</a><br><a href="#%E7%BB%93%E6%9E%9C%20Result">结果</a><br><a href="#%E6%80%BB%E7%BB%93%20Conclusion">总结</a><br><a href="#%E9%97%AE%E9%A2%98%20Question">问题</a><br><a href="#After">最后</a></p>
-<h2 id="摘要-Abstract"><a href="#摘要-Abstract" class="headerlink" title="摘要 Abstract"></a>摘要 Abstract</h2><p>提出了一种网络和训练策略，该策略依赖于大量使用数据增强来更有效地使用可用的标注样本。对训练的样本进行增强</p>
-<p>该体系结构由捕获上下文的收缩路径和支持精确本地化的对称扩展路径组成。此外，网络速度很快。在最新的GPU上，分割512x512图像只需不到一秒的时间。<br>code：<a target="_blank" rel="noopener" href="http://lmb.informatik.uni-freiburg.de/people/ronneber/u-net">U-Net</a></p>
-<h2 id="介绍-Introduction"><a href="#介绍-Introduction" class="headerlink" title="介绍 Introduction"></a>介绍 Introduction</h2><p>深度学习在参数和数据集大小上有一些限制，那么对于小样本的学习，就存在一些问题。</p>
-<p>卷积网络的应用是在图像分类方面，但在生物医学图像处理方面，往往需要输出定位，对像素的类别标签，如果只有几k的图像，达不到训练的要求。</p>
-<p>之后就出现了使用滑动窗口的形式去预测pixel的标签。滑动窗口也是一种数据增强的方式。数据可以大于训练的图像。sliding-window<br>缺点是对于补丁大小方面存在权衡。</p>
-<h2 id="材料和方法-Materials-and-Methods"><a href="#材料和方法-Materials-and-Methods" class="headerlink" title="材料和方法 Materials and Methods"></a>材料和方法 Materials and Methods</h2><p>该体系结构进行了修改和扩展，使其能够处理非常少的训练图像，并产生更精确的分割<br><img src="https://jsd.cdn.zzko.cn/gh/jundecno/imagerepo@main/Blogs/MarkDown/202312151106207.png" alt="image.png"></p>
-<blockquote>
-<p>所以叫U-Net</p>
-</blockquote>
-<p>主要是通过连续的层补充收缩网络，池操作符用上采样操作符来代替。因此，这些层提高了输出的分辨率。为了定位，将收缩路径的高分辨率特征与上采样输出相结合。然后，连续的卷积层可以学习基于该信息组合更精确的输出。</p>
-<p>如果将左边视作为编码，将右边视作为解码<br>同层编码也会输出到同层的解码，有种残差的味道<br>不存在全连接层。即仅存在卷积的操作。</p>
-<pre><code>input: 572x572(通过镜像处理过的图片)
-op: 64x570x570 64个可学习的卷积核
-op: 64x568x568 64个可学习的卷积核
-op: 284x284    2x2池化
-...
-op: 32x32      2x2池化
-...
-op: 28x28      2x2池化
-op: 1024x56x56 同层的512x64x64与512x56x56想结合并裁剪多余部分
-...
+                <p>文章地址: <a target="_blank" rel="noopener" href="https://www.ijcai.org/proceedings/2023/0536.pdf">GLPocket: A Multi-Scale Representation Learning Approach for Protein Binding Site Prediction (ijcai.org)</a></p>
+<h2 id="摘要-Abstract"><a href="#摘要-Abstract" class="headerlink" title="摘要 Abstract"></a>摘要 Abstract</h2><p>基于最小均方误差重构(LMSER)网络，并利用多尺度表示来预测结合位点。<br>首先，GLPocket使用目标裁剪块(TCB)进行目标预测。TCB从全局表示中选择局部感兴趣的特征进行集中预测。</p>
+<h2 id="介绍-Introduction"><a href="#介绍-Introduction" class="headerlink" title="介绍 Introduction"></a>介绍 Introduction</h2><p>蛋白质结合位点主要是蛋白质种的深沟或者凹槽的形式（grooves or tunnels）问题研究的意义<br><strong>problem的困难之处</strong>：蛋白质表面凹凸不平，导致出现很多假阳的部位。直径相差比较大，导致预测困难。<br><strong>介绍相关工作</strong>：几何、模板、能量、机器学习、深度学习</p>
+<ul>
+<li>根据蛋白质的几何特征预测</li>
+<li>从数据库中搜索最相似的蛋白质，分配给查询的蛋白质</li>
+<li>最小相互作用能量预测[[13-AutoSite 一个自动化的方法基于配体结合的伪配体预测站点识别是预测的关键配位原子]]</li>
+<li>使用物理和化学信息分配和标记口袋点数，用随机森林算法计算绑定分数。</li>
+<li>DeepSite使用CNN进行处理预测，但都是局部，没到达体素级别，从蛋白质的三维坐标系出发？[[14-DeepSite 使用 3D 卷积神经网络的蛋白质结合位点预测器]]<br>论文主要的改进就是在per-voxel的分类上，使用3D U-Net<br>存在使用整个蛋白质作为输入，另一个是以局部小范围残基作为输入，使用FPocket对多个进行预测，的到每个小范围的候选中心，使用这些候选中心作为输入。建立了解码器到编码器的反馈链路。<br>肯定了局部区域方法的合理性，但又没有考虑周围环境和全局信息。<br>是对全局和局部的权衡。<br>最小均方误差重构(LMSER)比U-Net更好。</li>
+</ul>
+<p>论文主要的创新：</p>
+<ul>
+<li>使用LMSER来捕捉预测位点</li>
+<li>使用蛋白质作为编码阶段的输入，获得全局表示</li>
+<li>使用Transformer获取局部肽间的依赖</li>
+<li>使用一种目标裁剪块来提取局部</li>
+</ul>
+<h2 id="材料和方法-Materials-and-Methods"><a href="#材料和方法-Materials-and-Methods" class="headerlink" title="材料和方法 Materials and Methods"></a>材料和方法 Materials and Methods</h2><p>四种Datasets <strong>scPDB COACH420 HOLOk PDBbind</strong></p>
+<p><strong>Architecture of GLPocket</strong><br>编码模块、解码模块、目标裁剪模块和transformer模块。<br>使用不同的卷积核编码再加上残差。<br>从全局中获得局部的映射<br>我觉得最关键的就是Target Cropping Block (TCB)的作用<br>获取更多的邻域信息来增强提案的表示能力。<br>TCB从候选中心的周围作为局部提议，这就是候选中心之间会存在重复的区域。<br><img src="https://jsd.cdn.zzko.cn/gh/jundecno/imagerepo@main/Blogs/MarkDown/202312141510756.png" alt="image.png"><br>是对像素属于binding pocket的预测</p>
+<p>三个Evaluation Metric</p>
+<ul>
+<li>DCA 是预测的口袋中心与最近的配体原子之间的距离。</li>
+<li>DCC 是预测口袋中心与标签中心之间的距离。</li>
+<li>DVO 是预测的pocket和对应的标签的重叠与它们的体积并集的比率。</li>
+</ul>
+<h2 id="结果-Result"><a href="#结果-Result" class="headerlink" title="结果 Result"></a>结果 Result</h2><p>通过消融实验验证了TCB和Tranformer的作用。</p>
+<h2 id="总结-Conclusion"><a href="#总结-Conclusion" class="headerlink" title="总结 Conclusion"></a>总结 Conclusion</h2><p>在本文中，我们提出了一种基于Lmser的网络结构GLPocket，用于捕获对象的多尺度表示以预测结合位点。我们设计了目标裁剪块(TCB)，从全局表示中选择感兴趣的局部特征进行目标预测。TCB融合了全局分布信息，使得局部区域表示具有更强的区分性，使预测更加集中和准确。TCB还在不引入额外参数的情况下，将要计算的特征映射的体积大大减少了82%。</p>
+<h2 id="问题-Question"><a href="#问题-Question" class="headerlink" title="问题 Question"></a>问题 Question</h2><p>多尺度表示学习方法是什么？[[00-PaperQuestion#多尺度表示学习]]<br>3D UNet是什么？ [[00-PaperQuestion#3D UNet]]<br>最小均方误差重构(LMSER)是什么？[[00-PaperQuestion#LMSER]]</p>
+<h2 id="After"><a href="#After" class="headerlink" title="After"></a>After</h2><h3 id="Results-Understanding"><a href="#Results-Understanding" class="headerlink" title="Results Understanding"></a>Results Understanding</h3><p>Transformer是有较大的作用的<br>TCB是一种获得邻域的方式</p>
+<h3 id="Methods-Cracking"><a href="#Methods-Cracking" class="headerlink" title="Methods Cracking"></a>Methods Cracking</h3><p>从像素级别进行判断是否合理？和生化性质有一定的区别。</p>
+<h3 id="Enhancement-or-Improvement-Ideas"><a href="#Enhancement-or-Improvement-Ideas" class="headerlink" title="Enhancement or Improvement Ideas"></a>Enhancement or Improvement Ideas</h3><p>全局和局部结合是提高的一种方式<br>将模型结合生化性质可能也是一种改进方向</p>
+<h3 id="Source-Code"><a href="#Source-Code" class="headerlink" title="Source Code"></a>Source Code</h3><pre class=" language-python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">clip</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> data_x<span class="token punctuation">,</span> f<span class="token punctuation">,</span> condidate_center<span class="token punctuation">,</span> a1a2<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        center <span class="token operator">=</span> condidate_center <span class="token operator">/</span> f
+        <span class="token comment" spellcheck="true"># block_list = []</span>
+        a1<span class="token punctuation">,</span> a2 <span class="token operator">=</span> a1a2
+        min_center <span class="token operator">=</span> <span class="token punctuation">(</span>center <span class="token operator">-</span> a1<span class="token punctuation">)</span><span class="token punctuation">.</span>int<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        max_center <span class="token operator">=</span> <span class="token punctuation">(</span>center <span class="token operator">+</span> a2<span class="token punctuation">)</span><span class="token punctuation">.</span>int<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        x1<span class="token punctuation">,</span> y1<span class="token punctuation">,</span> z1 <span class="token operator">=</span> min_center<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span>
+        x2<span class="token punctuation">,</span> y2<span class="token punctuation">,</span> z2 <span class="token operator">=</span> max_center<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span>
+        <span class="token comment" spellcheck="true"># print(center)</span>
+        <span class="token comment" spellcheck="true"># print('a1={} a2={}'.format(a1, a2))</span>
+        <span class="token comment" spellcheck="true"># print('x1,y1,z1=', x1, y1, z1)</span>
+        <span class="token comment" spellcheck="true"># print('x2,y2,z2=', x2, y2, z2)</span>
+        batch_block <span class="token operator">=</span> data_x<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">,</span> <span class="token punctuation">:</span><span class="token punctuation">,</span> x1<span class="token punctuation">:</span> x2 <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">,</span> y1<span class="token punctuation">:</span> y2 <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">,</span> z1<span class="token punctuation">:</span>z2 <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">]</span>
+        <span class="token keyword">return</span> batch_block
 </code></pre>
-<p>通过对可用的训练图像应用弹性变形来进行过度的数据增强。<br>模型近可能的去模拟生物领域组织的真实变形。</p>
-<p>对于原始图片是512x512的尺寸，U-Net使用Overlay-tile Strategy对边缘进行非0填充。<br>Overlay-tile Strategy的目的是对更大的图做分割时可以无缝拼接？<br>572可以是的每次进行降采样后的尺寸都是偶数。</p>
-<p>U-Net的损失函数是使用加权损失，其中接触单元之间分离的背景标签在损失函数中获得较大的权重。<br>能量函数通过pixel的softmax的交叉熵loss function计算。<br>$E=\sum_{\mathbf{x}\in\Omega}w(\mathbf{x})\mathrm{log}(p_{\ell(\mathbf{x})}(\mathbf{x}))$<br>$K$ is the number of classes and $p_k(x)$ is the approximated maximum-function.<br>每个类别的最大值函数与标签进行交叉熵。$w(x)$是权重，重点关注某些像素。<br>使用SGD方法<br>使用形态学运算计算分离边界。然后，权重图计算为：<br>$$<br>w(\mathbf{x})=w_c(\mathbf{x})+w_0\cdot\exp\left(-\frac{(d_1(\mathbf{x})+d_2(\mathbf{x}))^2}{2\sigma^2}\right)<br>$$<br>这里 $w_c:\Omega\in\mathbb{R}$ 是平衡类别比例的权值，$d_1:\Omega\in\mathbb{R}$ 是像素点到距离其最近的细胞的距离， $d_2:\Omega\in\mathbb{R}$ 则是像素点到距离其第二近的细胞的距离。$w_0$ 和 $\sigma$ 是常数值，在实验中 $w_0=10$<br> , $\sigma\approx5:。$ why?</p>
-<p>文中对于模型描述的原话：<br>The network architecture is illustrated in Figure 1. It consists of a contracting path (left side) and an expansive path (right side). The contracting path follows the typical architecture of a convolutional network. It consists of the repeated application of two 3x3 convolutions (unpadded convolutions), each followed by a rectified linear unit (ReLU) and a 2x2 max pooling operation with stride 2 for downsampling. At each downsampling step we double the number of feature channels. Every step in the expansive path consists of an upsampling of the feature map followed by a 2x2 convolution (“up-convolution”) that halves the number of feature channels, a concatenation with the correspondingly cropped feature map from the contracting path, and two 3x3 convolutions, each followed by a ReLU. The cropping is necessary due to the loss of border pixels in every convolution. At the final layer a 1x1 convolution is used to map each 64-component feature vector to the desired number of classes. In total the network has 23 convolutional layers. To allow a seamless tiling of the output segmentation map (see Figure 2), it is important to select the input tile size such that all 2x2 max-pooling operations are applied to a layer with an even x- and y-size.</p>
-<p>比如这是二分类，输入两个维度表示每个类别的情况。</p>
-<p>文中使用随机位移向量在粗略的3x3网格上生成平滑变形。</p>
-<h2 id="结果-Result"><a href="#结果-Result" class="headerlink" title="结果 Result"></a>结果 Result</h2><p>U-Net在医学图像分割方面效果很好。</p>
-<h2 id="总结-Conclusion"><a href="#总结-Conclusion" class="headerlink" title="总结 Conclusion"></a>总结 Conclusion</h2><p>U-Net是比较早的使用多尺度特征进行语义分割任务的算法之一，其U形结构也启发了后面很多算法。但其也有几个缺点：</p>
-<ol>
-<li>有效卷积增加了模型设计的难度和普适性；目前很多算法直接采用了same卷积，这样也可以免去Feature Map合并之前的裁边操作</li>
-<li>其通过裁边的形式和Feature Map并不是对称的，个人感觉采用双线性插值的效果应该会更好。</li>
-</ol>
-<h2 id="问题-Question"><a href="#问题-Question" class="headerlink" title="问题 Question"></a>问题 Question</h2><p>ISBI细胞跟踪挑战赛？<br>Overlay-tile Strategy？<br>EM stacks？</p>
-<h2 id="After"><a href="#After" class="headerlink" title="After"></a>After</h2><h3 id="Results-Understanding"><a href="#Results-Understanding" class="headerlink" title="Results Understanding"></a>Results Understanding</h3><h3 id="Methods-Cracking"><a href="#Methods-Cracking" class="headerlink" title="Methods Cracking"></a>Methods Cracking</h3><h3 id="Enhancement-or-Improvement-Ideas"><a href="#Enhancement-or-Improvement-Ideas" class="headerlink" title="Enhancement or Improvement Ideas"></a>Enhancement or Improvement Ideas</h3><h3 id="Source-Code"><a href="#Source-Code" class="headerlink" title="Source Code"></a>Source Code</h3>
+<blockquote>
+<p>其实就是根据中心划分周围区域的一种方式</p>
+</blockquote>
+
                 
             </div>
             <hr/>
@@ -715,7 +727,7 @@ op: 1024x56x56 同层的512x64x64与512x56x56想结合并裁剪多余部分
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="/about" rel="external nofollow noreferrer">JunDecNo</a>
+                    <a href="../about" rel="external nofollow noreferrer">JunDecNo</a>
                 </span>
             </div>
             <div class="reprint__type">
@@ -725,7 +737,7 @@ op: 1024x56x56 同层的512x64x64与512x56x56想结合并裁剪多余部分
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://jundecno.github.io/2023/12/15/15-U-Net%20%E7%94%A8%E4%BA%8E%E7%94%9F%E7%89%A9%E5%8C%BB%E5%AD%A6%E5%9B%BE%E5%83%8F%E5%88%86%E5%89%B2%E7%9A%84%E5%8D%B7%E7%A7%AF%E7%BD%91%E7%BB%9C/">https://jundecno.github.io/2023/12/15/15-U-Net%20%E7%94%A8%E4%BA%8E%E7%94%9F%E7%89%A9%E5%8C%BB%E5%AD%A6%E5%9B%BE%E5%83%8F%E5%88%86%E5%89%B2%E7%9A%84%E5%8D%B7%E7%A7%AF%E7%BD%91%E7%BB%9C/</a>
+                    <a href="https://jundecno.github.io">https://jundecno.github.io</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -738,7 +750,7 @@ op: 1024x56x56 同层的512x64x64与512x56x56想结合并裁剪多余部分
                     本博客所有文章除特別声明外，均采用
                     <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
                     许可协议。转载请注明来源
-                    <a href="/about" target="_blank">JunDecNo</a>
+                    <a href="../about" target="_blank">JunDecNo</a>
                     !
                 </span>
             </div>
@@ -763,11 +775,11 @@ op: 1024x56x56 同层的512x64x64与512x56x56想结合并裁剪多余部分
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/">
+                                <a href="../tags/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/">
                                     <span class="chip bg-color">论文阅读</span>
                                 </a>
                             
-                                <a href="/tags/PLIS/">
+                                <a href="../tags/PLIS/">
                                     <span class="chip bg-color">PLIS</span>
                                 </a>
                             
@@ -775,12 +787,12 @@ op: 1024x56x56 同层的512x64x64与512x56x56想结合并裁剪多余部分
                     
                 </div>
                 <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
-                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+                    <link rel="stylesheet" type="text/css" href="../libs/share/css/share.min.css">
 <div id="article-share">
 
     
     <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
-    <script src="/libs/share/js/social-share.min.js"></script>
+    <script src="../libs/share/js/social-share.min.js"></script>
     
 
     
@@ -808,10 +820,10 @@ op: 1024x56x56 同层的512x64x64与512x56x56想结合并裁剪多余部分
                         <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
                     </ul>
                     <div id="alipay">
-                        <img src="/medias/reward/alipay.png" class="reward-img" alt="支付宝打赏二维码">
+                        <img src="../medias/reward/alipay.png" class="reward-img" alt="支付宝打赏二维码">
                     </div>
                     <div id="wechat">
-                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                        <img src="../medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
                     </div>
                 </div>
             </div>
@@ -849,7 +861,7 @@ op: 1024x56x56 同层的512x64x64与512x56x56想结合并裁剪多余部分
 
     #vcomments textarea {
         box-sizing: border-box;
-        background: url("/medias/comment_bg.png") 100% 100% no-repeat;
+        background: url("../medias/comment_bg.png") 100% 100% no-repeat;
     }
 
     #vcomments p {
@@ -1083,8 +1095,8 @@ op: 1024x56x56 同层的512x64x64与512x56x56想结合并裁剪多余部分
     </div>
 </div>
 
-<script src="/libs/valine/av-min.js"></script>
-<script src="/libs/valine/Valine.min.js"></script>
+<script src="../libs/valine/av-min.js"></script>
+<script src="../libs/valine/Valine.min.js"></script>
 <script>
     new Valine({
         el: '#vcomments',
@@ -1129,12 +1141,11 @@ op: 1024x56x56 同层的512x64x64与512x56x56想结合并裁剪多余部分
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;本篇
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2023/12/15/15-U-Net%20%E7%94%A8%E4%BA%8E%E7%94%9F%E7%89%A9%E5%8C%BB%E5%AD%A6%E5%9B%BE%E5%83%8F%E5%88%86%E5%89%B2%E7%9A%84%E5%8D%B7%E7%A7%AF%E7%BD%91%E7%BB%9C/">
+                <a href="../15-U-Net%20%E7%94%A8%E4%BA%8E%E7%94%9F%E7%89%A9%E5%8C%BB%E5%AD%A6%E5%9B%BE%E5%83%8F%E5%88%86%E5%89%B2%E7%9A%84%E5%8D%B7%E7%A7%AF%E7%BD%91%E7%BB%9C/">
                     <div class="card-image">
                         
                         
@@ -1150,14 +1161,14 @@ op: 1024x56x56 同层的512x64x64与512x56x56想结合并裁剪多余部分
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2023-12-15
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2023-12-15
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E7%A7%91%E7%A0%94%E8%AE%BA%E6%96%87/" class="post-category">
+                            <a href="../categories/%E7%A7%91%E7%A0%94%E8%AE%BA%E6%96%87/" class="post-category">
                                     科研论文
                                 </a>
                             
@@ -1165,15 +1176,14 @@ op: 1024x56x56 同层的512x64x64与512x56x56想结合并裁剪多余部分
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/">
+                    <a href="../tags/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/">
                         <span class="chip bg-color">论文阅读</span>
                     </a>
                     
-                    <a href="/tags/PLIS/">
+                    <a href="../tags/PLIS/">
                         <span class="chip bg-color">PLIS</span>
                     </a>
                     
@@ -1188,30 +1198,30 @@ op: 1024x56x56 同层的512x64x64与512x56x56想结合并裁剪多余部分
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2023/12/14/12-GLPocket%EF%BC%9A%E8%9B%8B%E7%99%BD%E8%B4%A8%E7%BB%93%E5%90%88%E4%BD%8D%E7%82%B9%E9%A2%84%E6%B5%8B%E7%9A%84%E5%A4%9A%E5%B0%BA%E5%BA%A6%E8%A1%A8%E7%A4%BA%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95/">
+                <a href="../Docker%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/">
                     <div class="card-image">
                         
-                        <img src="https://s2.loli.net/2023/12/14/opIifjZvcdPg1Ve.png" class="responsive-img" alt="12-GLPocket：蛋白质结合位点预测的多尺度表示学习方法">
+                        <img src="https://www.nesabamedia.com/wp-content/uploads/2021/02/Pengertian-Docker-Beserta-Fungsinya-680x350.png" class="responsive-img" alt="Docker的基本使用">
                         
-                        <span class="card-title">12-GLPocket：蛋白质结合位点预测的多尺度表示学习方法</span>
+                        <span class="card-title">Docker的基本使用</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            关于GLPocket的阅读理解
+                            帮助了解Docker的基本使用
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2023-12-14
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-10-08
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E7%A7%91%E7%A0%94%E8%AE%BA%E6%96%87/" class="post-category">
-                                    科研论文
+                            <a href="../categories/%E5%B7%A5%E5%85%B7%E4%BD%BF%E7%94%A8/" class="post-category">
+                                    工具使用
                                 </a>
                             
                             
@@ -1221,12 +1231,16 @@ op: 1024x56x56 同层的512x64x64与512x56x56想结合并裁剪多余部分
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/">
-                        <span class="chip bg-color">论文阅读</span>
+                    <a href="../tags/%E5%B7%A5%E5%85%B7%E4%BD%BF%E7%94%A8/">
+                        <span class="chip bg-color">工具使用</span>
                     </a>
                     
-                    <a href="/tags/PLIS/">
-                        <span class="chip bg-color">PLIS</span>
+                    <a href="../tags/%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/">
+                        <span class="chip bg-color">基本使用</span>
+                    </a>
+                    
+                    <a href="../tags/Docker/">
+                        <span class="chip bg-color">Docker</span>
                     </a>
                     
                 </div>
@@ -1279,21 +1293,21 @@ op: 1024x56x56 同层的512x64x64与512x56x56想结合并裁剪多余部分
 
 
 <!-- 代码块功能依赖 -->
-<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+<script type="text/javascript" src="../libs/codeBlock/codeBlockFuction.js"></script>
 
 <!-- 代码语言 -->
 
-<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+<script type="text/javascript" src="../libs/codeBlock/codeLang.js"></script>
 
 
 <!-- 代码块复制 -->
 
-<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+<script type="text/javascript" src="../libs/codeBlock/codeCopy.js"></script>
 
 
 <!-- 代码块收缩 -->
 
-<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+<script type="text/javascript" src="../libs/codeBlock/codeShrink.js"></script>
 
 
     </div>
@@ -1314,7 +1328,7 @@ op: 1024x56x56 同层的512x64x64与512x56x56想结合并裁剪多余部分
 </div>
 
 
-<script src="/libs/tocbot/tocbot.min.js"></script>
+<script src="../libs/tocbot/tocbot.min.js"></script>
 <script>
     $(function () {
         tocbot.init({
@@ -1382,13 +1396,6 @@ op: 1024x56x56 同层的512x64x64与512x56x56想结合并裁剪多余部分
 </main>
 
 
-<script src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-<script>
-    MathJax.Hub.Config({
-        tex2jax: {inlineMath: [['$', '$'], ['\\(', '\\)']]}
-    });
-</script>
-
 
 
     <footer class="page-footer bg-color">
@@ -1404,7 +1411,7 @@ op: 1024x56x56 同层的512x64x64与512x56x56想结合并裁剪多余部分
                 >2022-2023</span
             >
             
-            <a href="/about" target="_blank"
+            <a href="../about" target="_blank"
                 >JunDecNo</a
             >
             |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank"
@@ -1642,7 +1649,7 @@ op: 1024x56x56 同层的512x64x64与512x56x56想结合并裁剪多余部分
 
 
 
-    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+    <a href="../atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
         <i class="fas fa-rss"></i>
     </a>
 
@@ -1754,7 +1761,7 @@ $(function () {
         });
     };
 
-    searchFunc('/search.xml', 'searchInput', 'searchResult');
+    searchFunc('../search.xml', 'searchInput', 'searchResult');
 });
 </script>
 
@@ -1790,16 +1797,16 @@ $(function () {
 </div>
 
 
-    <script src="/libs/materialize/materialize.min.js"></script>
-    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
-    <script src="/libs/aos/aos.js"></script>
-    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
-    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
-    <script src="/js/matery.js"></script>
+    <script src="../libs/materialize/materialize.min.js"></script>
+    <script src="../libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="../libs/aos/aos.js"></script>
+    <script src="../libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="../libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="../js/matery.js"></script>
 
     
         <!-- <script src='https://unpkg.com/mermaid@latest/dist/mermaid.min.js'></script> -->
-        <script src='/libs/mermaid/mermaid.min.js'></script>
+        <script src='../libs/mermaid/mermaid.min.js'></script>
         <script>
           if (window.mermaid) {
             mermaid.initialize({theme: 'forest'});
@@ -1815,7 +1822,7 @@ $(function () {
             // 只在桌面版网页启用特效
             var windowWidth = $(window).width();
             if (windowWidth > 768) {
-                document.write('<script type="text/javascript" src="/libs/others/snow.js"><\/script>');
+                document.write('<script type="text/javascript" src="../libs/others/snow.js"><\/script>');
             }
         </script>
     
@@ -1825,7 +1832,7 @@ $(function () {
 
      
         <script src="https://ssl.captcha.qq.com/TCaptcha.js"></script>
-        <script src="/libs/others/TencentCaptcha.js"></script>
+        <script src="../libs/others/TencentCaptcha.js"></script>
         <button id="TencentCaptcha" data-appid="xxxxxxxxxx" data-cbfn="callback" type="button" hidden></button>
     
 
@@ -1848,10 +1855,10 @@ $(function () {
 </script>
 
     
-    <script src="/libs/others/clicklove.js" async="async"></script>
+    <script src="../libs/others/clicklove.js" async="async"></script>
     
     
-    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+    <script async src="../libs/others/busuanzi.pure.mini.js"></script>
     
 
     
@@ -1883,17 +1890,17 @@ $(function () {
     <script type="text/javascript" color="0,0,255"
         pointColor="0,0,255" opacity='0.7'
         zIndex="-1" count="99"
-        src="/libs/background/canvas-nest.js"></script>
+        src="../libs/background/canvas-nest.js"></script>
     
 
     
 
     
-    <script type="text/javascript" src="/libs/background/ribbon-dynamic.js" async="async"></script>
+    <script type="text/javascript" src="../libs/background/ribbon-dynamic.js" async="async"></script>
     
 
     
-    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    <script src="../libs/instantpage/instantpage.js" type="module"></script>
     
 
 <script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginModelPath":"assets/","model":{"jsonPath":"/live2dw/assets/wanko.model.json"},"display":{"position":"left","width":200,"height":300},"mobile":{"show":false},"log":false,"pluginJsPath":"lib/","pluginRootPath":"live2dw/","tagMode":false});</script></body>

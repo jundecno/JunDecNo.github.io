@@ -4,8 +4,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Docker的基本使用, JunDecNo">
-    <meta name="description" content="帮助了解Docker的基本使用">
+    <meta name="keywords" content="15-U-Net 用于生物医学图像分割的卷积网络, JunDecNo">
+    <meta name="description" content="关于U-Net的阅读笔记">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -17,9 +17,9 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Docker的基本使用 | JunDecNo</title>
+    <title>15-U-Net 用于生物医学图像分割的卷积网络 | JunDecNo</title>
     <link rel="icon" type="image/png" href="https://s2.loli.net/2023/08/26/XWj3sUKFErVQOwd.png">
-    <link rel="stylesheet" type="text/css" href="/css/loading.css">
+    <link rel="stylesheet" type="text/css" href="../css/loading.css">
 
     
 
@@ -28,31 +28,31 @@
 
 
 
-<link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.min.css">
-<link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
-<link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
-<link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
-<link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
-<link rel="stylesheet" type="text/css" href="/css/matery.css">
-<link rel="stylesheet" type="text/css" href="/css/my.css">
-<link rel="stylesheet" type="text/css" href="/css/dark.css" media="none" onload="if(media!='all')media='all'">
+<link rel="stylesheet" type="text/css" href="../libs/awesome/css/all.min.css">
+<link rel="stylesheet" type="text/css" href="../libs/materialize/materialize.min.css">
+<link rel="stylesheet" type="text/css" href="../libs/aos/aos.css">
+<link rel="stylesheet" type="text/css" href="../libs/animate/animate.min.css">
+<link rel="stylesheet" type="text/css" href="../libs/lightGallery/css/lightgallery.min.css">
+<link rel="stylesheet" type="text/css" href="../css/matery.css">
+<link rel="stylesheet" type="text/css" href="../css/my.css">
+<link rel="stylesheet" type="text/css" href="../css/dark.css" media="none" onload="if(media!='all')media='all'">
 
 
 
 
-    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
-    <link rel="stylesheet" href="/css/post.css">
+    <link rel="stylesheet" href="../libs/tocbot/tocbot.css">
+    <link rel="stylesheet" href="../css/post.css">
 
 
 
 
     
-        <link rel="stylesheet" type="text/css" href="/css/reward.css">
+        <link rel="stylesheet" type="text/css" href="../css/reward.css">
     
 
 
 
-    <script src="/libs/jquery/jquery-3.6.0.min.js"></script>
+    <script src="../libs/jquery/jquery-3.6.0.min.js"></script>
 
 <meta name="generator" content="Hexo 6.2.0">
 <style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
@@ -88,7 +88,7 @@
     <nav id="headNav" class="bg-color nav-transparent">
         <div id="navContainer" class="nav-wrapper container">
             <div class="brand-logo">
-                <a href="/" class="waves-effect waves-light">
+                <a href="../index.html" class="waves-effect waves-light">
                     
                     <img src="https://s2.loli.net/2023/08/26/XWj3sUKFErVQOwd.png" class="logo-img" alt="LOGO">
                     
@@ -102,7 +102,7 @@
   
   <li class="hide-on-med-and-down nav-item">
     
-    <a href="/" class="waves-effect waves-light">
+    <a href="../index.html" class="waves-effect waves-light">
       
       <i class="fas fa-home" style="zoom: 0.6;"></i>
       
@@ -124,7 +124,7 @@
     <ul class="sub-nav menus_item_child ">
       
       <li>
-        <a href="/tools/index.html">
+        <a href="../tools/index.html">
           
           <i class="fa fa-box" style="margin-top: -20px; zoom: 0.6;"></i>
           
@@ -158,7 +158,7 @@
     <ul class="sub-nav menus_item_child ">
       
       <li>
-        <a href="/tags">
+        <a href="../tags">
           
           <i class="fas fa-tags" style="margin-top: -20px; zoom: 0.6;"></i>
           
@@ -167,7 +167,7 @@
       </li>
       
       <li>
-        <a href="/categories">
+        <a href="../categories">
           
           <i class="fas fa-bookmark" style="margin-top: -20px; zoom: 0.6;"></i>
           
@@ -176,7 +176,7 @@
       </li>
       
       <li>
-        <a href="/archives">
+        <a href="../archives">
           
           <i class="fas fa-archive" style="margin-top: -20px; zoom: 0.6;"></i>
           
@@ -201,7 +201,7 @@
     <ul class="sub-nav menus_item_child ">
       
       <li>
-        <a href="/musics">
+        <a href="../musics">
           
           <i class="fas fa-music" style="margin-top: -20px; zoom: 0.6;"></i>
           
@@ -210,7 +210,7 @@
       </li>
       
       <li>
-        <a href="/movies">
+        <a href="../movies">
           
           <i class="fas fa-film" style="margin-top: -20px; zoom: 0.6;"></i>
           
@@ -219,7 +219,7 @@
       </li>
       
       <li>
-        <a href="/books">
+        <a href="../books">
           
           <i class="fas fa-book" style="margin-top: -20px; zoom: 0.6;"></i>
           
@@ -244,7 +244,7 @@
     <ul class="sub-nav menus_item_child ">
       
       <li>
-        <a href="/about">
+        <a href="../about">
           
           <i class="fas fa-user-circle" style="margin-top: -20px; zoom: 0.6;"></i>
           
@@ -253,7 +253,7 @@
       </li>
       
       <li>
-        <a href="/contact">
+        <a href="../contact">
           
           <i class="fas fa-comments" style="margin-top: -20px; zoom: 0.6;"></i>
           
@@ -262,7 +262,7 @@
       </li>
       
       <li>
-        <a href="/friends">
+        <a href="../friends">
           
           <i class="fas fa-address-book" style="margin-top: -20px; zoom: 0.6;"></i>
           
@@ -305,7 +305,7 @@
         
         <li class="m-nav-item">
 	  
-		<a href="/" class="waves-effect waves-light">
+		<a href="../index.html" class="waves-effect waves-light">
 			
 			    <i class="fa-fw fas fa-home"></i>
 			
@@ -327,7 +327,7 @@
               
                 <li>
 
-                  <a href="/tools/index.html " style="margin-left:50px">
+                  <a href="../tools/index.html " style="margin-left:50px">
 				  
 				   <i class="fa fa fa-box" style="position: absolute;left:28px" ></i>
 			      
@@ -362,7 +362,7 @@
               
                 <li>
 
-                  <a href="/tags " style="margin-left:50px">
+                  <a href="../tags " style="margin-left:50px">
 				  
 				   <i class="fa fas fa-tags" style="position: absolute;left:28px" ></i>
 			      
@@ -372,7 +372,7 @@
               
                 <li>
 
-                  <a href="/categories " style="margin-left:50px">
+                  <a href="../categories " style="margin-left:50px">
 				  
 				   <i class="fa fas fa-bookmark" style="position: absolute;left:28px" ></i>
 			      
@@ -382,7 +382,7 @@
               
                 <li>
 
-                  <a href="/archives " style="margin-left:50px">
+                  <a href="../archives " style="margin-left:50px">
 				  
 				   <i class="fa fas fa-archive" style="position: absolute;left:28px" ></i>
 			      
@@ -407,7 +407,7 @@
               
                 <li>
 
-                  <a href="/musics " style="margin-left:50px">
+                  <a href="../musics " style="margin-left:50px">
 				  
 				   <i class="fa fas fa-music" style="position: absolute;left:28px" ></i>
 			      
@@ -417,7 +417,7 @@
               
                 <li>
 
-                  <a href="/movies " style="margin-left:50px">
+                  <a href="../movies " style="margin-left:50px">
 				  
 				   <i class="fa fas fa-film" style="position: absolute;left:28px" ></i>
 			      
@@ -427,7 +427,7 @@
               
                 <li>
 
-                  <a href="/books " style="margin-left:50px">
+                  <a href="../books " style="margin-left:50px">
 				  
 				   <i class="fa fas fa-book" style="position: absolute;left:28px" ></i>
 			      
@@ -452,7 +452,7 @@
               
                 <li>
 
-                  <a href="/about " style="margin-left:50px">
+                  <a href="../about " style="margin-left:50px">
 				  
 				   <i class="fa fas fa-user-circle" style="position: absolute;left:28px" ></i>
 			      
@@ -462,7 +462,7 @@
               
                 <li>
 
-                  <a href="/contact " style="margin-left:50px">
+                  <a href="../contact " style="margin-left:50px">
 				  
 				   <i class="fa fas fa-comments" style="position: absolute;left:28px" ></i>
 			      
@@ -472,7 +472,7 @@
               
                 <li>
 
-                  <a href="/friends " style="margin-left:50px">
+                  <a href="../friends " style="margin-left:50px">
 				  
 				   <i class="fa fas fa-address-book" style="position: absolute;left:28px" ></i>
 			      
@@ -563,12 +563,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://www.nesabamedia.com/wp-content/uploads/2021/02/Pengertian-Docker-Beserta-Fungsinya-680x350.png')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://s2.loli.net/2023/09/07/dnRj8ygSwaQoPBc.png')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Docker的基本使用</h1>
+                    <h1 class="description center-align post-title">15-U-Net 用于生物医学图像分割的卷积网络</h1>
                 </div>
             </div>
         </div>
@@ -592,16 +592,12 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E5%B7%A5%E5%85%B7%E4%BD%BF%E7%94%A8/">
-                                <span class="chip bg-color">工具使用</span>
+                            <a href="../tags/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/">
+                                <span class="chip bg-color">论文阅读</span>
                             </a>
                         
-                            <a href="/tags/%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/">
-                                <span class="chip bg-color">基本使用</span>
-                            </a>
-                        
-                            <a href="/tags/Docker/">
-                                <span class="chip bg-color">Docker</span>
+                            <a href="../tags/PLIS/">
+                                <span class="chip bg-color">PLIS</span>
                             </a>
                         
                     </div>
@@ -612,8 +608,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E5%B7%A5%E5%85%B7%E4%BD%BF%E7%94%A8/" class="post-category">
-                                工具使用
+                            <a href="../categories/%E7%A7%91%E7%A0%94%E8%AE%BA%E6%96%87/" class="post-category">
+                                科研论文
                             </a>
                         
                     </div>
@@ -625,28 +621,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2023-10-08
+                    2023-12-15
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2023-12-14
+                    2023-12-15
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    209
+                    1.4k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    5 分
                 </div>
                 
 
@@ -666,381 +662,44 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="Docker-概述"><a href="#Docker-概述" class="headerlink" title="Docker 概述"></a>Docker 概述</h2><h3 id="安装docker"><a href="#安装docker" class="headerlink" title="安装docker"></a>安装docker</h3><pre><code>环境准备
+                <p>文章地址: <a target="_blank" rel="noopener" href="https://link.springer.com/chapter/10.1007/978-3-319-24574-4_28">U-Net: Convolutional Networks for Biomedical Image Segmentation | SpringerLink</a></p>
+<p><a href="#%E6%91%98%E8%A6%81%20Abstract">摘要</a><br><a href="#%E4%BB%8B%E7%BB%8D%20Introduction">介绍</a><br><a href="#%E6%9D%90%E6%96%99%E5%92%8C%E6%96%B9%E6%B3%95%20Materials%20and%20Methods">材料和方法</a><br><a href="#%E7%BB%93%E6%9E%9C%20Result">结果</a><br><a href="#%E6%80%BB%E7%BB%93%20Conclusion">总结</a><br><a href="#%E9%97%AE%E9%A2%98%20Question">问题</a><br><a href="#After">最后</a></p>
+<h2 id="摘要-Abstract"><a href="#摘要-Abstract" class="headerlink" title="摘要 Abstract"></a>摘要 Abstract</h2><p>提出了一种网络和训练策略，该策略依赖于大量使用数据增强来更有效地使用可用的标注样本。对训练的样本进行增强</p>
+<p>该体系结构由捕获上下文的收缩路径和支持精确本地化的对称扩展路径组成。此外，网络速度很快。在最新的GPU上，分割512x512图像只需不到一秒的时间。<br>code：<a target="_blank" rel="noopener" href="http://lmb.informatik.uni-freiburg.de/people/ronneber/u-net">U-Net</a></p>
+<h2 id="介绍-Introduction"><a href="#介绍-Introduction" class="headerlink" title="介绍 Introduction"></a>介绍 Introduction</h2><p>深度学习在参数和数据集大小上有一些限制，那么对于小样本的学习，就存在一些问题。</p>
+<p>卷积网络的应用是在图像分类方面，但在生物医学图像处理方面，往往需要输出定位，对像素的类别标签，如果只有几k的图像，达不到训练的要求。</p>
+<p>之后就出现了使用滑动窗口的形式去预测pixel的标签。滑动窗口也是一种数据增强的方式。数据可以大于训练的图像。sliding-window<br>缺点是对于补丁大小方面存在权衡。</p>
+<h2 id="材料和方法-Materials-and-Methods"><a href="#材料和方法-Materials-and-Methods" class="headerlink" title="材料和方法 Materials and Methods"></a>材料和方法 Materials and Methods</h2><p>该体系结构进行了修改和扩展，使其能够处理非常少的训练图像，并产生更精确的分割<br><img src="https://jsd.cdn.zzko.cn/gh/jundecno/imagerepo@main/Blogs/MarkDown/202312151106207.png" alt="image.png"></p>
+<blockquote>
+<p>所以叫U-Net</p>
+</blockquote>
+<p>主要是通过连续的层补充收缩网络，池操作符用上采样操作符来代替。因此，这些层提高了输出的分辨率。为了定位，将收缩路径的高分辨率特征与上采样输出相结合。然后，连续的卷积层可以学习基于该信息组合更精确的输出。</p>
+<p>如果将左边视作为编码，将右边视作为解码<br>同层编码也会输出到同层的解码，有种残差的味道<br>不存在全连接层。即仅存在卷积的操作。</p>
+<pre><code>input: 572x572(通过镜像处理过的图片)
+op: 64x570x570 64个可学习的卷积核
+op: 64x568x568 64个可学习的卷积核
+op: 284x284    2x2池化
+...
+op: 32x32      2x2池化
+...
+op: 28x28      2x2池化
+op: 1024x56x56 同层的512x64x64与512x56x56想结合并裁剪多余部分
+...
 </code></pre>
-<p>docker一般是运行在linux系统上的.<br>如果在windows上运行, 需要使用windows自带的wsl服务</p>
-<pre><code> 环境查看
-</code></pre>
-<p>[root@192 ~]# uname -r<br>5.14.0-325.el9.x86_64</p>
-<pre><code>安装
-</code></pre>
+<p>通过对可用的训练图像应用弹性变形来进行过度的数据增强。<br>模型近可能的去模拟生物领域组织的真实变形。</p>
+<p>对于原始图片是512x512的尺寸，U-Net使用Overlay-tile Strategy对边缘进行非0填充。<br>Overlay-tile Strategy的目的是对更大的图做分割时可以无缝拼接？<br>572可以是的每次进行降采样后的尺寸都是偶数。</p>
+<p>U-Net的损失函数是使用加权损失，其中接触单元之间分离的背景标签在损失函数中获得较大的权重。<br>能量函数通过pixel的softmax的交叉熵loss function计算。<br>$E=\sum_{\mathbf{x}\in\Omega}w(\mathbf{x})\mathrm{log}(p_{\ell(\mathbf{x})}(\mathbf{x}))$<br>$K$ is the number of classes and $p_k(x)$ is the approximated maximum-function.<br>每个类别的最大值函数与标签进行交叉熵。$w(x)$是权重，重点关注某些像素。<br>使用SGD方法<br>使用形态学运算计算分离边界。然后，权重图计算为：<br>$$<br>w(\mathbf{x})=w_c(\mathbf{x})+w_0\cdot\exp\left(-\frac{(d_1(\mathbf{x})+d_2(\mathbf{x}))^2}{2\sigma^2}\right)<br>$$<br>这里 $w_c:\Omega\in\mathbb{R}$ 是平衡类别比例的权值，$d_1:\Omega\in\mathbb{R}$ 是像素点到距离其最近的细胞的距离， $d_2:\Omega\in\mathbb{R}$ 则是像素点到距离其第二近的细胞的距离。$w_0$ 和 $\sigma$ 是常数值，在实验中 $w_0=10$<br> , $\sigma\approx5:。$ why?</p>
+<p>文中对于模型描述的原话：<br>The network architecture is illustrated in Figure 1. It consists of a contracting path (left side) and an expansive path (right side). The contracting path follows the typical architecture of a convolutional network. It consists of the repeated application of two 3x3 convolutions (unpadded convolutions), each followed by a rectified linear unit (ReLU) and a 2x2 max pooling operation with stride 2 for downsampling. At each downsampling step we double the number of feature channels. Every step in the expansive path consists of an upsampling of the feature map followed by a 2x2 convolution (“up-convolution”) that halves the number of feature channels, a concatenation with the correspondingly cropped feature map from the contracting path, and two 3x3 convolutions, each followed by a ReLU. The cropping is necessary due to the loss of border pixels in every convolution. At the final layer a 1x1 convolution is used to map each 64-component feature vector to the desired number of classes. In total the network has 23 convolutional layers. To allow a seamless tiling of the output segmentation map (see Figure 2), it is important to select the input tile size such that all 2x2 max-pooling operations are applied to a layer with an even x- and y-size.</p>
+<p>比如这是二分类，输入两个维度表示每个类别的情况。</p>
+<p>文中使用随机位移向量在粗略的3x3网格上生成平滑变形。</p>
+<h2 id="结果-Result"><a href="#结果-Result" class="headerlink" title="结果 Result"></a>结果 Result</h2><p>U-Net在医学图像分割方面效果很好。</p>
+<h2 id="总结-Conclusion"><a href="#总结-Conclusion" class="headerlink" title="总结 Conclusion"></a>总结 Conclusion</h2><p>U-Net是比较早的使用多尺度特征进行语义分割任务的算法之一，其U形结构也启发了后面很多算法。但其也有几个缺点：</p>
 <ol>
-<li>卸载旧版本docker</li>
-<li>安装, 使用仓库安装<ol>
-<li><code>sudo yum install -y yum-utils</code> 安装依赖</li>
-<li>设置镜像的仓库 本文使用阿里云</li>
-<li><code>yum install docker-ce docker-ce-cli containerd.io</code></li>
-<li>启动docker <code>systemctl start docker</code></li>
-<li>使用<code>docker version</code>查看是否安装成功</li>
+<li>有效卷积增加了模型设计的难度和普适性；目前很多算法直接采用了same卷积，这样也可以免去Feature Map合并之前的裁边操作</li>
+<li>其通过裁边的形式和Feature Map并不是对称的，个人感觉采用双线性插值的效果应该会更好。</li>
 </ol>
-</li>
-</ol>
-<pre class=" language-shell"><code class="language-shell">docker run <container-name> #运行docker环境,如果本地没有,就回去network上pull
-docker images # 查看docker的环境
-REPOSITORY    TAG       IMAGE ID       CREATED        SIZE
-hello-world   latest    9c7a54a9a43c   2 months ago   13.3kB
-</code></pre>
-<h3 id="阿里云镜像加速"><a href="#阿里云镜像加速" class="headerlink" title="阿里云镜像加速"></a>阿里云镜像加速</h3><ol>
-<li>登录阿里云找到容器服务<img src="https://jsd.cdn.zzko.cn/gh/jundecno/imagerepo@main/Blogs/MarkDown/202307300431335.png"></li>
-<li>找镜像加速地址<img src="https://jsd.cdn.zzko.cn/gh/jundecno/imagerepo@main/Blogs/MarkDown/202307300432557.png"></li>
-<li>配置具体环境, 复制代码运行即可</li>
-</ol>
-<pre class=" language-shell"><code class="language-shell">sudo mkdir -p /etc/docker 
-sudo tee /etc/docker/daemon.json <<-'EOF' 
-{ "registry-mirrors": ["https://5qn4r3mz.mirror.aliyuncs.com"] 
-}
-EOF 
-sudo systemctl daemon-reload 
-sudo systemctl restart docker
-</code></pre>
-<p>这样就可以使用阿里云加速docker hub了. </p>
-<h3 id="Docker底层原理"><a href="#Docker底层原理" class="headerlink" title="Docker底层原理"></a>Docker底层原理</h3><p>Docker是一个CLient-Server结构的系统, Docker的守护进程运行在主机上, 通过Socker从客户端访问.<br>![[Drawing 2023-07-30 04.40.47.excalidraw]]<br><strong>Docker为什么比VM快</strong><br><img src="https://jsd.cdn.zzko.cn/gh/jundecno/imagerepo@main/Blogs/MarkDown/202307300451843.png"><br>Docker层数更少.<br>docker利用宿主机的内核, vm需要系统OS<br>docker依赖于宿主系统, 而vm不需要这样. </p>
-<h2 id="Docker的常用命令"><a href="#Docker的常用命令" class="headerlink" title="Docker的常用命令"></a>Docker的常用命令</h2><h3 id="帮助命令"><a href="#帮助命令" class="headerlink" title="帮助命令"></a>帮助命令</h3><pre class=" language-shell"><code class="language-shell">docker version # 显示docker的版本信息
-docker info    # 显示docker的系统信息, 包括容器等
-docker 命令 --help #显示帮助命令
-</code></pre>
-<p>帮助文档的地址:<a target="_blank" rel="noopener" href="https://docs.docker.com/engine/reference/builder/">Dockerfile reference | Docker Documentation</a></p>
-<h3 id="镜像命令"><a href="#镜像命令" class="headerlink" title="镜像命令"></a>镜像命令</h3><p><strong>docker images</strong>显示所有本地的主机上的镜像</p>
-<pre class=" language-shell"><code class="language-shell">REPOSITORY    TAG       IMAGE ID       CREATED        SIZE
-镜像的仓库源   标签      镜像id         创建时间        大小 
-</code></pre>
-<p>-a –all 显示所有镜像<br>-q –quiet 只显示id<br><strong>docker search</strong>搜索docker的镜像</p>
-<pre class=" language-shell"><code class="language-shell">NAME                            DESCRIPTION                                      STARS     OFFICIAL   AUTOMATED
-mysql                           MySQL is a widely used, open-source relation…   14338     [OK]       
-mariadb                         MariaDB Server is a high performing open sou…   5474      [OK]       
-percona                         Percona Server is a fork of the MySQL relati…   618       [OK]       
-phpmyadmin                      phpMyAdmin - A web interface for MySQL and M…   840       [OK]      
-bitnami/mysql                   Bitnami MySQL Docker Image                       93                   [OK]
-</code></pre>
-<p>–filter=&lt;筛选条件&gt; 类似于Github的搜索方式<br><strong>docker pull</strong>下载远程的docker镜像</p>
-<pre class=" language-shell"><code class="language-shell">[root@192 ~]# docker pull mysql # 不写tag就下载最新
-Using default tag: latest
-# docker下载采用分层下载
-72a69066d2fe: Pull complete 
-93619dbc5b36: Pull complete 
-99da31dd6142: Pull complete 
-626033c43d70: Pull complete 
-37d5d7efb64e: Pull complete 
-ac563158d721: Pull complete 
-d2ba16033dad: Pull complete 
-688ba7d5c01a: Pull complete 
-00e060b6d11d: Pull complete 
-1c04857f594f: Pull complete 
-4d7cfa90e6ea: Pull complete 
-e0431212d27d: Pull complete 
-Digest: sha256:e9027fe4d91c0153429607251656806cc784e914937271037f7738bd5b8e7709  #签名
-Status: Downloaded newer image for mysql:latest
-docker.io/library/mysql:lates= # 真实地址
-</code></pre>
-<pre><code>分层下载,如果存在相同的内容,就公用后不再下载
-指定标签的命令 `docker pull MySQL:5.0.7`
-</code></pre>
-<p><strong>docker rmi</strong>删除镜像</p>
-<pre class=" language-shell"><code class="language-shell">docker rmi -f 容器的id-1 <容器的id-2> ...
-docker rmi -f $(docker images -aq) # 删除所有的容器<docker images -aq>返回所有的容器id,这样就可以全部删除了. 
-</code></pre>
-<h3 id="容器命令"><a href="#容器命令" class="headerlink" title="容器命令"></a>容器命令</h3><p>说明: 有了镜像才可以创建容器, 本次使用centos测试<br>==容器和镜像的区别?==[[01-ToolQuestion#Docker容器和镜像的关系]]</p>
-<pre class=" language-shell"><code class="language-shell">docker pull centos
-</code></pre>
-<p><strong>新建容器并启动</strong></p>
-<pre class=" language-shell"><code class="language-shell">docker run [可选参数] image
-# 参数说明
---name="Name" 容器名字 xxxx
--d            后台运行方式
--it           使用交互方式运行, 进入容器查看内容
--p            指定容器端口 -p 
-    -p 主机端口:容器端口(常用)
-    -p 容器端口
-    -p IP:主机端口:容器端口
--P            随机指定端口
--rm           用完就删除
-#测试启动并进入容器
-docker run -it centos /bin/bash # -it表示使用交互方式, /bin/bash表示使用终端
-
-#退出容器的命令
-exit
-</code></pre>
-<p><strong>列出所有的启动的容器</strong></p>
-<pre class=" language-shell"><code class="language-shell"># docker ps 显示当前正在运行的容器 -a显示历史所有的容器
-# -n=? 显示容器的后?个容器
-# -q 显示编号
-# 
-[root@192 ~]# docker ps -a 
-CONTAINER ID   IMAGE         COMMAND       CREATED         STATUS                     PORTS     NAMES
-0f1c67f488b4   centos        "/bin/bash"   3 minutes ago   Exited (0) 3 seconds ago             cranky_hypatia
-ebb882b6736d   hello-world   "/hello"      32 hours ago    Exited (0) 32 hours ago              nice_wright
-</code></pre>
-<p><strong>退出容器</strong></p>
-<pre class=" language-shell"><code class="language-shell">exit # 退出容器
-Ctrl + P + Q # 容器不停止退出
-</code></pre>
-<p><strong>删除容器</strong></p>
-<pre class=" language-shell"><code class="language-shell">docker rm 容器id
-docker rm -f $(docker ps -aq) # 删除所有容器
-docker ps -aq | xargs docker rm # 删除所用容器 利用管道特性
-</code></pre>
-<p><strong>启动和停止容器</strong></p>
-<pre class=" language-shell"><code class="language-shell">docker start 容器id
-docker restart 容器id
-docker stop 容器id
-docker kill 容器id
-</code></pre>
-<h3 id="常用的其他命令"><a href="#常用的其他命令" class="headerlink" title="常用的其他命令"></a>常用的其他命令</h3><p><strong>后台启动容器</strong></p>
-<pre class=" language-sh"><code class="language-sh">[root@192 ~]# docker run -d centos
-73adc1fab09efd6a57f7a87d640ea180b826231c78a3795b9329380076b3903b
-[root@192 ~]# docker ps 
-CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
-# 命令 docker run -d 容器id会出现ps无法看到容器
-# docker容器使用后台运行, 就必须要使用一个前台进程, 如果没有应用, 则自动停止
-</code></pre>
-<p><strong>查看日志命令</strong></p>
-<pre class=" language-sh"><code class="language-sh">docker logs
-docker logs -ft --tail number 容器id
-# 例子 显示后十条日志
-docker logs -ft --tail 10 id名
-</code></pre>
-<blockquote>
-<p>docker run  -d 镜像名  -c “&lt;shell命令&gt;”</p>
-</blockquote>
-<p><strong>查看容器中的进程信息</strong></p>
-<pre class=" language-sh"><code class="language-sh">docker top 容器id #查看容器id的进程信息
-</code></pre>
-<p><strong>查看镜像的元数据</strong></p>
-<pre class=" language-sh"><code class="language-sh">docker inspect 容器id # 查看容器id的元数据
-</code></pre>
-<p><strong>进入当前正在运行的容器</strong></p>
-<pre class=" language-sh"><code class="language-sh"># 方式一 docker exec
-docker exec -it 容器id /bin/bash
-
-# 方式二 docker attach
-docker attach 容器id /bin/bash
-</code></pre>
-<blockquote>
-<p>二者的区别:<br>    dcoker exec -it 进入操作终端<br>    docker attach 进入正在执行界面, 无法进行操作</p>
-</blockquote>
-<p><strong>从容器来复制文件到主机</strong></p>
-<pre class=" language-sh"><code class="language-sh">docker copy 容器id:容器内的路径 主机路径
-[root@192 ~]# docker cp ed34aece5e5d:/home/copy.cpp /home
-Successfully copied 1.54kB to /home
-</code></pre>
-<blockquote>
-<p>同时, 我们可以使用-v的可选参数, 实现自动同步的功能. v = volume</p>
-</blockquote>
-<h3 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h3><p><img src="https://jsd.cdn.zzko.cn/gh/jundecno/imagerepo@main/Blogs/MarkDown/202308010854237.png" alt="image.png"><br><strong>端口暴露</strong><br>![[Drawing 2023-08-01 12.07.12.excalidraw]]</p>
-<h3 id="可视化"><a href="#可视化" class="headerlink" title="可视化"></a>可视化</h3><ul>
-<li>portainer</li>
-</ul>
-<pre class=" language-sh"><code class="language-sh">docker run -d -p 8000:8000 -p 9443:9443 --name portainer --restart=always -v /var/run/docker.sock:/var/run/docker.sock --privileged=true portainer/portainer
-</code></pre>
-<p><img src="https://jsd.cdn.zzko.cn/gh/jundecno/imagerepo@main/Blogs/MarkDown/202308021219218.png" alt="image.png"></p>
-<p><img src="https://jsd.cdn.zzko.cn/gh/jundecno/imagerepo@main/Blogs/MarkDown/202308021223315.png" alt="image.png"><br><img src="https://jsd.cdn.zzko.cn/gh/jundecno/imagerepo@main/Blogs/MarkDown/202308021224373.png" alt="image.png"></p>
-<blockquote>
-<p>portainer可以很方便的查看镜像容器的信息</p>
-</blockquote>
-<h2 id="Docker镜像讲解"><a href="#Docker镜像讲解" class="headerlink" title="Docker镜像讲解"></a>Docker镜像讲解</h2><h3 id="docker镜像加载原理"><a href="#docker镜像加载原理" class="headerlink" title="docker镜像加载原理"></a>docker镜像加载原理</h3><blockquote>
-<p>联合文件系统</p>
-</blockquote>
-<p>分层 轻量 高效的文件系统UnionFS. 其实就是可以通过逐步添加的方式进行更新</p>
-<p><strong>bootfs</strong>主要包含bootloader和kernel. bootloader主要是引导加载kernel, Linux启动就会运行bootfs, 即引导层<br><strong>rootfs</strong>就是各种不同操作系统的发行版, 包含基础的命令.<br><strong>bootfs+rootfs</strong>镜像就是更新<strong>rootfs</strong>就可以了.</p>
-<p>比如对于一个pull过来的镜像, 当我们实例化后, 就会在镜像层上生成一个容器层, 进行commit的时候会同时进行一次修改<br>就是相当于在原有的镜像上修改. 镜像为不可更改. </p>
-<h3 id="commit-镜像"><a href="#commit-镜像" class="headerlink" title="commit 镜像"></a>commit 镜像</h3><pre class=" language-sh"><code class="language-sh">docker commit 
-docker commit -m="提交的描述信息" -a="作者" 容器id name:tag
-# 示例
-$ docker commit -a="JunDecNo" -m="tomcat initial webapps" tomcat9 tomcati:0.1.1
-sha256:27a2df35a29460d6da20c3e3ac77df9d4b22ba9cd67fc36d8b28bfffa492b8cf
-[root@192 ~]# docker images
-REPOSITORY            TAG       IMAGE ID       CREATED          SIZE
-tomcati               0.1.1     27a2df35a294   25 seconds ago   685MB
-</code></pre>
-<h2 id="容器数据卷"><a href="#容器数据卷" class="headerlink" title="容器数据卷"></a>容器数据卷</h2><blockquote>
-<p>存在的问题: 如果将数据都放在容器里, 如果容器删除了那么数据就丢失了<br>    就需要在删除容器的时候数据依旧保存在本地<br>同时多个容器也可以使用同一个目录,实现数据共享. 这样就可以实现运行和数据分离</p>
-</blockquote>
-<p><strong>方式一: 使用-v方式</strong></p>
-<pre class=" language-sh"><code class="language-sh">-v 宿主机目录:容器目录
-#例如
-$ docker run -it -v /home/volume:/home/ centos ctos /bin/bash
-</code></pre>
-<p><strong>样例图</strong><br><img src="https://jsd.cdn.zzko.cn/gh/jundecno/imagerepo@main/Blogs/MarkDown/202308031104561.png" alt="image.png"><br>Mysql实战[[Docker作业#作业四 MySql同步]]</p>
-<h3 id="具名和匿名挂载"><a href="#具名和匿名挂载" class="headerlink" title="具名和匿名挂载"></a>具名和匿名挂载</h3><p><strong>匿名挂载</strong></p>
-<pre class=" language-sh"><code class="language-sh"># 匿名挂载
-$ docker run -d -p 3310:3306 --name mysql02 -v /etc/mysql/conf.d mysql
-</code></pre>
-<blockquote>
-<p>匿名挂载就是直接指定容器内的文件路径.<br>并没有给volume起名字. 那么到底挂载在哪里呢?<br><img src="https://jsd.cdn.zzko.cn/gh/jundecno/imagerepo@main/Blogs/MarkDown/202308041457352.png" alt="image.png"></p>
-</blockquote>
-<p><strong>具名挂载</strong></p>
-<pre class=" language-sh"><code class="language-sh"># 具名挂载
-$ docker run -d -p 3310:3306 --name mysql03 -v name:/etc/mysql/data mysql
-</code></pre>
-<blockquote>
-<p>具名挂载就是容器具有具体的名字<br><img src="https://jsd.cdn.zzko.cn/gh/jundecno/imagerepo@main/Blogs/MarkDown/202308041459386.png" alt="image.png"></p>
-</blockquote>
-<pre class=" language-sh"><code class="language-sh">[root@192 mysql]# docker volume inspect centOS
-[
-    {
-        "CreatedAt": "2023-08-04T14:58:52+08:00",
-        "Driver": "local",
-        "Labels": null,
-        "Mountpoint": "/var/lib/docker/volumes/centOS/_data",
-        "Name": "centOS",
-        "Options": null,
-        "Scope": "local"
-    }
-]
-</code></pre>
-<blockquote>
-<p>可以看到docker的卷存放在宿主机的<code>\var\lib\docker\volumes</code>中<br><img src="https://jsd.cdn.zzko.cn/gh/jundecno/imagerepo@main/Blogs/MarkDown/202308041501338.png" alt="image.png"><br><strong>总结</strong></p>
-</blockquote>
-<pre class=" language-sh"><code class="language-sh"># 匿名
--v 容器内路径
--v 名称:容器内路径
--v 宿主机绝对路径:容器内路径
-</code></pre>
-<blockquote>
-<p>同时可以修改读取权限<br>ro 只读<br>rw 可读可写</p>
-</blockquote>
-<p><code>docker run -v name:path:[ro|rw] centos</code><br><strong>方式二: 通过DockerFile</strong><br>通过脚本构建文件<br>dockerl file</p>
-<pre class=" language-sh"><code class="language-sh">FROM centos
-
-VOLUME ["volume01","volume02"] # 匿名挂载
-
-CMD echo "------------end---------------"
-CMD /bin/bash
-</code></pre>
-<p>docker build</p>
-<pre class=" language-sh"><code class="language-sh">docker build -f dockerfile1 -t centos .
-</code></pre>
-<blockquote>
-<p>-t表示构建的name:tag<br><img src="https://jsd.cdn.zzko.cn/gh/jundecno/imagerepo@main/Blogs/MarkDown/202308041818028.png" alt="image.png"><br><img src="https://jsd.cdn.zzko.cn/gh/jundecno/imagerepo@main/Blogs/MarkDown/202308041830265.png" alt="image.png"></p>
-</blockquote>
-<p><strong>数据卷同步数据</strong><br>容器与容器之间同步</p>
-<ul>
-<li>先申明一个容器, 之后再实例化容器时进行绑定<code>docker run -it --name docker01 --volumes-from docker02 jentos</code><blockquote>
-<p>container1 volumes-from container2<br>container1就实现了与container2数据共享</p>
-</blockquote>
-</li>
-</ul>
-<p>数据卷同步在删除container2时container1的共享卷仍然可以运行<br><em>其实就是container2和container1对应宿主机中的同一个挂载卷, 只要宿主机中不删除那就依然可以使用</em></p>
-<p>这里就有个问题了, 共享卷共享的是哪部分?<br>针对一样的两个centos系统.<br><img src="https://jsd.cdn.zzko.cn/gh/jundecno/imagerepo@main/Blogs/MarkDown/202308050025225.png" alt="image.png"></p>
-<p><img src="https://jsd.cdn.zzko.cn/gh/jundecno/imagerepo@main/Blogs/MarkDown/202308050025038.png" alt="image.png"></p>
-<blockquote>
-<p>可以看到挂载的信息时一直的.<br>所以在使用volumes-from 就是复制container的挂载信息. 所以也会同步这两个文件<br>如果<strong>没有挂载信息那就不存在同步</strong><br>存在挂载信息, 就会新建目录</p>
-</blockquote>
-<pre class=" language-sh"><code class="language-sh">[root@192 ~]# docker run -it --name docker03 --volumes-from docker02 centos
-[root@a7298952d2d9 /]# ls
-bin  dev  etc  home  lib  lib64  lost+found  media  mnt  opt  proc  root  run  sbin  srv  sys  tmp  usr  var  volume01  volume02
-</code></pre>
-<h2 id="DockerFile"><a href="#DockerFile" class="headerlink" title="DockerFile"></a>DockerFile</h2><p><strong>DockerFile时构建Docker image的文件</strong><br>docker的构建步骤:</p>
-<ol>
-<li>编写一个dockerfile文件</li>
-<li>docker build 构建镜像</li>
-<li>docker run 运行镜像</li>
-<li>docker push 发布镜像</li>
-</ol>
-<h3 id="Docker的构建过程"><a href="#Docker的构建过程" class="headerlink" title="Docker的构建过程"></a>Docker的构建过程</h3><ol>
-<li>每个关键字必须大写</li>
-<li>顺序执行</li>
-<li><h1 id="表示注释"><a href="#表示注释" class="headerlink" title="表示注释"></a>表示注释</h1></li>
-<li>每个指令都会提交一个新的镜像层</li>
-</ol>
-<h3 id="DockerFile的指令"><a href="#DockerFile的指令" class="headerlink" title="DockerFile的指令"></a>DockerFile的指令</h3><p><img src="https://i.bmp.ovh/imgs/2022/03/800e39c60291da56.png"></p>
-<pre class=" language-sh"><code class="language-sh">CMD          # 指定容器启动后的命令,会被替代
-ENTRYPOINT   # 与CMD类似, 但可以追加命令
-ONBUILD      # 运行DockerFile就会触发
-COPY         # 类似ADD, 拷贝文件
-ENV          # 构建的时候设置环境变量
-</code></pre>
-<p>[[Docker作业#作业五 实战DockerFile]]</p>
-<blockquote>
-<p>可以通过docker history 查看容器构建历史</p>
-</blockquote>
-<h3 id="CMD和ENTRYPOINT的区别"><a href="#CMD和ENTRYPOINT的区别" class="headerlink" title="CMD和ENTRYPOINT的区别"></a>CMD和ENTRYPOINT的区别</h3><pre class=" language-sh"><code class="language-sh">FROM centos
-
-CMD ["ls", "-a"]
-ENTRYPOINT ["ls", "-a"]
-</code></pre>
-<p><img src="https://jsd.cdn.zzko.cn/gh/jundecno/imagerepo@main/Blogs/MarkDown/202308050145505.png" alt="image.png"></p>
-<blockquote>
-<p>只有最后一个CMD会生效<br><img src="https://jsd.cdn.zzko.cn/gh/jundecno/imagerepo@main/Blogs/MarkDown/202308050200633.png" alt="image.png"><br>ENTRYPOINT的-l可以追加 而CMD会报错</p>
-</blockquote>
-<p>实战Tomcat[[Docker作业#作业六 实战Tomcat]]</p>
-<h3 id="发布镜像到dockerhub"><a href="#发布镜像到dockerhub" class="headerlink" title="发布镜像到dockerhub"></a>发布镜像到dockerhub</h3><pre class=" language-sh"><code class="language-sh">docker login --help
-Options:
-  -p, --password string   Password
-      --password-stdin    Take the password from stdin
-  -u, --username string   Username
-docker login -u jundecno
-
-WARNING! Your password will be stored unencrypted in /root/.docker/config.json.
-Configure a credential helper to remove this warning. See
-https://docs.docker.com/engine/reference/commandline/login/#credentials-store
-
-Login Succeeded
-
-[root@192 ~]# docker push jundecno/tomcat:latest
-The push refers to repository [docker.io/jundecno/tomcat]
-5f70bf18a086: Pushed 
-67ffe5d1bc00: Pushed 
-67e24e94fed1: Pushed 
-74ddd0ec08fa: Pushed 
-latest: digest: sha256:0593dbe646f6c41d4b305d5aaf83bab1949f15a7bd893a1e9caa10cbea92f3fd size: 1160
-</code></pre>
-<p><img src="https://jsd.cdn.zzko.cn/gh/jundecno/imagerepo@main/Blogs/MarkDown/202308051634898.png" alt="image.png"></p>
-<h3 id="发布到阿里云"><a href="#发布到阿里云" class="headerlink" title="发布到阿里云"></a>发布到阿里云</h3><ol>
-<li>登录阿里云</li>
-<li>找到镜像服务</li>
-<li>创建命名空间<img src="https://jsd.cdn.zzko.cn/gh/jundecno/imagerepo@main/Blogs/MarkDown/202308051641869.png" alt="image.png"></li>
-<li>创建镜像仓库<img src="https://jsd.cdn.zzko.cn/gh/jundecno/imagerepo@main/Blogs/MarkDown/202308051643244.png" alt="image.png"></li>
-<li>浏览阿里云<img src="https://jsd.cdn.zzko.cn/gh/jundecno/imagerepo@main/Blogs/MarkDown/202308051647721.png" alt="image.png"></li>
-</ol>
-<pre class=" language-sh"><code class="language-sh">[root@jundecno ~]$ docker login --username=lucaxzzz registry.cn-hangzhou.aliyuncs.com
-# 需要重新命令
-[root@192 ~]$ docker tag 39251683c4fd  registry.cn-hangzhou.aliyuncs.com/jundecno/test-jun:1.0
-# push
-[root@192 ~]$ docker push registry.cn-hangzhou.aliyuncs.com/jundecno/test-jun:1.0
-The push refers to repository [registry.cn-hangzhou.aliyuncs.com/jundecno/test-jun]
-5f70bf18a086: Pushed 
-67ffe5d1bc00: Pushed 
-67e24e94fed1: Pushed 
-74ddd0ec08fa: Pushed 
-1.0: digest: sha256:0593dbe646f6c41d4b305d5aaf83bab1949f15a7bd893a1e9caa10cbea92f3fd size: 1160
-</code></pre>
-<p><img src="https://jsd.cdn.zzko.cn/gh/jundecno/imagerepo@main/Blogs/MarkDown/202308051658607.png" alt="image.png"></p>
-<blockquote>
-<p>阿里云的镜像仓库和dokcer hub的上传push类似<br>阿里云真的很不错. 点赞</p>
-</blockquote>
-<h3 id="小结-1"><a href="#小结-1" class="headerlink" title="小结"></a>小结</h3><p><img src="https://jsd.cdn.zzko.cn/gh/jundecno/imagerepo@main/Blogs/MarkDown/202308051703566.png" alt="image.png"></p>
-<h2 id="Docker-Network"><a href="#Docker-Network" class="headerlink" title="Docker Network"></a>Docker Network</h2><h3 id="理解docker0"><a href="#理解docker0" class="headerlink" title="理解docker0"></a>理解docker0</h3><pre class=" language-sh"><code class="language-sh">4: docker0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue state UP group default 
-    link/ether 02:42:08:37:ab:e4 brd ff:ff:ff:ff:ff:ff
-</code></pre>
-<blockquote>
-<p>docker如何处理网络连接</p>
-</blockquote>
-<pre class=" language-sh"><code class="language-sh">[root@192 ~]# docker run -d -P --name tomcat01 tomcat
-1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
-    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
-    inet 127.0.0.1/8 scope host lo
-       valid_lft forever preferred_lft forever
-13: eth0@if14: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue state UP group default 
-    link/ether 02:42:ac:11:00:04 brd ff:ff:ff:ff:ff:ff link-netnsid 0
-    inet 172.17.0.4/16 brd 172.17.255.255 scope global eth0
-       valid_lft forever preferred_lft forever
-</code></pre>
-<blockquote>
-<p>容器的eth0表示容器的地址</p>
-</blockquote>
-<p>日后再见!</p>
-
+<h2 id="问题-Question"><a href="#问题-Question" class="headerlink" title="问题 Question"></a>问题 Question</h2><p>ISBI细胞跟踪挑战赛？<br>Overlay-tile Strategy？<br>EM stacks？</p>
+<h2 id="After"><a href="#After" class="headerlink" title="After"></a>After</h2><h3 id="Results-Understanding"><a href="#Results-Understanding" class="headerlink" title="Results Understanding"></a>Results Understanding</h3><h3 id="Methods-Cracking"><a href="#Methods-Cracking" class="headerlink" title="Methods Cracking"></a>Methods Cracking</h3><h3 id="Enhancement-or-Improvement-Ideas"><a href="#Enhancement-or-Improvement-Ideas" class="headerlink" title="Enhancement or Improvement Ideas"></a>Enhancement or Improvement Ideas</h3><h3 id="Source-Code"><a href="#Source-Code" class="headerlink" title="Source Code"></a>Source Code</h3>
                 
             </div>
             <hr/>
@@ -1056,7 +715,7 @@ The push refers to repository [registry.cn-hangzhou.aliyuncs.com/jundecno/test-j
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="/about" rel="external nofollow noreferrer">JunDecNo</a>
+                    <a href="../about" rel="external nofollow noreferrer">JunDecNo</a>
                 </span>
             </div>
             <div class="reprint__type">
@@ -1066,7 +725,7 @@ The push refers to repository [registry.cn-hangzhou.aliyuncs.com/jundecno/test-j
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://jundecno.github.io/2023/10/08/Docker%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/">https://jundecno.github.io/2023/10/08/Docker%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/</a>
+                    <a href="https://jundecno.github.io">https://jundecno.github.io</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -1079,7 +738,7 @@ The push refers to repository [registry.cn-hangzhou.aliyuncs.com/jundecno/test-j
                     本博客所有文章除特別声明外，均采用
                     <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
                     许可协议。转载请注明来源
-                    <a href="/about" target="_blank">JunDecNo</a>
+                    <a href="../about" target="_blank">JunDecNo</a>
                     !
                 </span>
             </div>
@@ -1104,28 +763,24 @@ The push refers to repository [registry.cn-hangzhou.aliyuncs.com/jundecno/test-j
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E5%B7%A5%E5%85%B7%E4%BD%BF%E7%94%A8/">
-                                    <span class="chip bg-color">工具使用</span>
+                                <a href="../tags/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/">
+                                    <span class="chip bg-color">论文阅读</span>
                                 </a>
                             
-                                <a href="/tags/%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/">
-                                    <span class="chip bg-color">基本使用</span>
-                                </a>
-                            
-                                <a href="/tags/Docker/">
-                                    <span class="chip bg-color">Docker</span>
+                                <a href="../tags/PLIS/">
+                                    <span class="chip bg-color">PLIS</span>
                                 </a>
                             
                         </div>
                     
                 </div>
                 <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
-                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+                    <link rel="stylesheet" type="text/css" href="../libs/share/css/share.min.css">
 <div id="article-share">
 
     
     <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
-    <script src="/libs/share/js/social-share.min.js"></script>
+    <script src="../libs/share/js/social-share.min.js"></script>
     
 
     
@@ -1153,10 +808,10 @@ The push refers to repository [registry.cn-hangzhou.aliyuncs.com/jundecno/test-j
                         <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
                     </ul>
                     <div id="alipay">
-                        <img src="/medias/reward/alipay.png" class="reward-img" alt="支付宝打赏二维码">
+                        <img src="../medias/reward/alipay.png" class="reward-img" alt="支付宝打赏二维码">
                     </div>
                     <div id="wechat">
-                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                        <img src="../medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
                     </div>
                 </div>
             </div>
@@ -1194,7 +849,7 @@ The push refers to repository [registry.cn-hangzhou.aliyuncs.com/jundecno/test-j
 
     #vcomments textarea {
         box-sizing: border-box;
-        background: url("/medias/comment_bg.png") 100% 100% no-repeat;
+        background: url("../medias/comment_bg.png") 100% 100% no-repeat;
     }
 
     #vcomments p {
@@ -1428,8 +1083,8 @@ The push refers to repository [registry.cn-hangzhou.aliyuncs.com/jundecno/test-j
     </div>
 </div>
 
-<script src="/libs/valine/av-min.js"></script>
-<script src="/libs/valine/Valine.min.js"></script>
+<script src="../libs/valine/av-min.js"></script>
+<script src="../libs/valine/Valine.min.js"></script>
 <script>
     new Valine({
         el: '#vcomments',
@@ -1474,33 +1129,35 @@ The push refers to repository [registry.cn-hangzhou.aliyuncs.com/jundecno/test-j
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2023/12/14/12-GLPocket%EF%BC%9A%E8%9B%8B%E7%99%BD%E8%B4%A8%E7%BB%93%E5%90%88%E4%BD%8D%E7%82%B9%E9%A2%84%E6%B5%8B%E7%9A%84%E5%A4%9A%E5%B0%BA%E5%BA%A6%E8%A1%A8%E7%A4%BA%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95/">
+                <a href="">
                     <div class="card-image">
                         
-                        <img src="https://s2.loli.net/2023/12/14/opIifjZvcdPg1Ve.png" class="responsive-img" alt="12-GLPocket：蛋白质结合位点预测的多尺度表示学习方法">
                         
-                        <span class="card-title">12-GLPocket：蛋白质结合位点预测的多尺度表示学习方法</span>
+                        <img src="https://s2.loli.net/2023/09/07/dnRj8ygSwaQoPBc.png" class="responsive-img" alt="15-U-Net 用于生物医学图像分割的卷积网络">
+                        
+                        <span class="card-title">15-U-Net 用于生物医学图像分割的卷积网络</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            关于GLPocket的阅读理解
+                            关于U-Net的阅读笔记
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2023-12-14
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-12-15
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E7%A7%91%E7%A0%94%E8%AE%BA%E6%96%87/" class="post-category">
+                            <a href="../categories/%E7%A7%91%E7%A0%94%E8%AE%BA%E6%96%87/" class="post-category">
                                     科研论文
                                 </a>
                             
@@ -1508,14 +1165,15 @@ The push refers to repository [registry.cn-hangzhou.aliyuncs.com/jundecno/test-j
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/">
+                    <a href="../tags/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/">
                         <span class="chip bg-color">论文阅读</span>
                     </a>
                     
-                    <a href="/tags/PLIS/">
+                    <a href="../tags/PLIS/">
                         <span class="chip bg-color">PLIS</span>
                     </a>
                     
@@ -1530,30 +1188,30 @@ The push refers to repository [registry.cn-hangzhou.aliyuncs.com/jundecno/test-j
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2023/08/06/Zotero%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/">
+                <a href="../12-GLPocket%EF%BC%9A%E8%9B%8B%E7%99%BD%E8%B4%A8%E7%BB%93%E5%90%88%E4%BD%8D%E7%82%B9%E9%A2%84%E6%B5%8B%E7%9A%84%E5%A4%9A%E5%B0%BA%E5%BA%A6%E8%A1%A8%E7%A4%BA%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95/">
                     <div class="card-image">
                         
-                        <img src="https://s2.loli.net/2023/11/06/63axjsoVeYlw4PJ.png" class="responsive-img" alt="Zotero的基本使用">
+                        <img src="https://s2.loli.net/2023/12/14/opIifjZvcdPg1Ve.png" class="responsive-img" alt="12-GLPocket：蛋白质结合位点预测的多尺度表示学习方法">
                         
-                        <span class="card-title">Zotero的基本使用</span>
+                        <span class="card-title">12-GLPocket：蛋白质结合位点预测的多尺度表示学习方法</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            帮助了解Zotero的基本使用
+                            关于GLPocket的阅读理解
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2023-08-06
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-12-14
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E5%B7%A5%E5%85%B7%E4%BD%BF%E7%94%A8/" class="post-category">
-                                    工具使用
+                            <a href="../categories/%E7%A7%91%E7%A0%94%E8%AE%BA%E6%96%87/" class="post-category">
+                                    科研论文
                                 </a>
                             
                             
@@ -1563,16 +1221,12 @@ The push refers to repository [registry.cn-hangzhou.aliyuncs.com/jundecno/test-j
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Zotero/">
-                        <span class="chip bg-color">Zotero</span>
+                    <a href="../tags/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/">
+                        <span class="chip bg-color">论文阅读</span>
                     </a>
                     
-                    <a href="/tags/%E5%B7%A5%E5%85%B7%E4%BD%BF%E7%94%A8/">
-                        <span class="chip bg-color">工具使用</span>
-                    </a>
-                    
-                    <a href="/tags/%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/">
-                        <span class="chip bg-color">基本使用</span>
+                    <a href="../tags/PLIS/">
+                        <span class="chip bg-color">PLIS</span>
                     </a>
                     
                 </div>
@@ -1625,21 +1279,21 @@ The push refers to repository [registry.cn-hangzhou.aliyuncs.com/jundecno/test-j
 
 
 <!-- 代码块功能依赖 -->
-<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+<script type="text/javascript" src="../libs/codeBlock/codeBlockFuction.js"></script>
 
 <!-- 代码语言 -->
 
-<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+<script type="text/javascript" src="../libs/codeBlock/codeLang.js"></script>
 
 
 <!-- 代码块复制 -->
 
-<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+<script type="text/javascript" src="../libs/codeBlock/codeCopy.js"></script>
 
 
 <!-- 代码块收缩 -->
 
-<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+<script type="text/javascript" src="../libs/codeBlock/codeShrink.js"></script>
 
 
     </div>
@@ -1660,7 +1314,7 @@ The push refers to repository [registry.cn-hangzhou.aliyuncs.com/jundecno/test-j
 </div>
 
 
-<script src="/libs/tocbot/tocbot.min.js"></script>
+<script src="../libs/tocbot/tocbot.min.js"></script>
 <script>
     $(function () {
         tocbot.init({
@@ -1728,6 +1382,13 @@ The push refers to repository [registry.cn-hangzhou.aliyuncs.com/jundecno/test-j
 </main>
 
 
+<script src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script>
+    MathJax.Hub.Config({
+        tex2jax: {inlineMath: [['$', '$'], ['\\(', '\\)']]}
+    });
+</script>
+
 
 
     <footer class="page-footer bg-color">
@@ -1743,7 +1404,7 @@ The push refers to repository [registry.cn-hangzhou.aliyuncs.com/jundecno/test-j
                 >2022-2023</span
             >
             
-            <a href="/about" target="_blank"
+            <a href="../about" target="_blank"
                 >JunDecNo</a
             >
             |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank"
@@ -1981,7 +1642,7 @@ The push refers to repository [registry.cn-hangzhou.aliyuncs.com/jundecno/test-j
 
 
 
-    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+    <a href="../atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
         <i class="fas fa-rss"></i>
     </a>
 
@@ -2093,7 +1754,7 @@ $(function () {
         });
     };
 
-    searchFunc('/search.xml', 'searchInput', 'searchResult');
+    searchFunc('../search.xml', 'searchInput', 'searchResult');
 });
 </script>
 
@@ -2129,16 +1790,16 @@ $(function () {
 </div>
 
 
-    <script src="/libs/materialize/materialize.min.js"></script>
-    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
-    <script src="/libs/aos/aos.js"></script>
-    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
-    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
-    <script src="/js/matery.js"></script>
+    <script src="../libs/materialize/materialize.min.js"></script>
+    <script src="../libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="../libs/aos/aos.js"></script>
+    <script src="../libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="../libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="../js/matery.js"></script>
 
     
         <!-- <script src='https://unpkg.com/mermaid@latest/dist/mermaid.min.js'></script> -->
-        <script src='/libs/mermaid/mermaid.min.js'></script>
+        <script src='../libs/mermaid/mermaid.min.js'></script>
         <script>
           if (window.mermaid) {
             mermaid.initialize({theme: 'forest'});
@@ -2154,7 +1815,7 @@ $(function () {
             // 只在桌面版网页启用特效
             var windowWidth = $(window).width();
             if (windowWidth > 768) {
-                document.write('<script type="text/javascript" src="/libs/others/snow.js"><\/script>');
+                document.write('<script type="text/javascript" src="../libs/others/snow.js"><\/script>');
             }
         </script>
     
@@ -2164,7 +1825,7 @@ $(function () {
 
      
         <script src="https://ssl.captcha.qq.com/TCaptcha.js"></script>
-        <script src="/libs/others/TencentCaptcha.js"></script>
+        <script src="../libs/others/TencentCaptcha.js"></script>
         <button id="TencentCaptcha" data-appid="xxxxxxxxxx" data-cbfn="callback" type="button" hidden></button>
     
 
@@ -2187,10 +1848,10 @@ $(function () {
 </script>
 
     
-    <script src="/libs/others/clicklove.js" async="async"></script>
+    <script src="../libs/others/clicklove.js" async="async"></script>
     
     
-    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+    <script async src="../libs/others/busuanzi.pure.mini.js"></script>
     
 
     
@@ -2222,17 +1883,17 @@ $(function () {
     <script type="text/javascript" color="0,0,255"
         pointColor="0,0,255" opacity='0.7'
         zIndex="-1" count="99"
-        src="/libs/background/canvas-nest.js"></script>
+        src="../libs/background/canvas-nest.js"></script>
     
 
     
 
     
-    <script type="text/javascript" src="/libs/background/ribbon-dynamic.js" async="async"></script>
+    <script type="text/javascript" src="../libs/background/ribbon-dynamic.js" async="async"></script>
     
 
     
-    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    <script src="../libs/instantpage/instantpage.js" type="module"></script>
     
 
 <script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginModelPath":"assets/","model":{"jsonPath":"/live2dw/assets/wanko.model.json"},"display":{"position":"left","width":200,"height":300},"mobile":{"show":false},"log":false,"pluginJsPath":"lib/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
