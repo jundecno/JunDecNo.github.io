@@ -1356,7 +1356,7 @@ The push refers to repository [registry.cn-hangzhou.aliyuncs.com/jundecno/test-j
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://jundecno.github.io">https://jundecno.github.io</a>
+                    <a id="link_url"></a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -1375,7 +1375,6 @@ The push refers to repository [registry.cn-hangzhou.aliyuncs.com/jundecno/test-j
             </div>
         
     </div>
-
     <script async defer>
       document.addEventListener("copy", function (e) {
         let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
@@ -1386,7 +1385,10 @@ The push refers to repository [registry.cn-hangzhou.aliyuncs.com/jundecno/test-j
         $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
       }
     </script>
-
+    <script>
+        document.getElementById('link_url').setAttribute('href', window.location.href);
+        document.getElementById('link_url').innerText = window.location.href;
+    </script>
 
 
             <div class="tag_share" style="display: block;">
@@ -1801,12 +1803,12 @@ The push refers to repository [registry.cn-hangzhou.aliyuncs.com/jundecno/test-j
                 
                 <div class="card-action article-tags">
                     
-                    <a href="../../../../tags/PLIS/">
-                        <span class="chip bg-color">PLIS</span>
-                    </a>
-                    
                     <a href="../../../../tags/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/">
                         <span class="chip bg-color">论文阅读</span>
+                    </a>
+                    
+                    <a href="../../../../tags/PLIS/">
+                        <span class="chip bg-color">PLIS</span>
                     </a>
                     
                 </div>

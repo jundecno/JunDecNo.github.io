@@ -844,7 +844,7 @@ E(A)--X-->F(C)--X-->E
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://jundecno.github.io">https://jundecno.github.io</a>
+                    <a id="link_url"></a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -863,7 +863,6 @@ E(A)--X-->F(C)--X-->E
             </div>
         
     </div>
-
     <script async defer>
       document.addEventListener("copy", function (e) {
         let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
@@ -874,7 +873,10 @@ E(A)--X-->F(C)--X-->E
         $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
       }
     </script>
-
+    <script>
+        document.getElementById('link_url').setAttribute('href', window.location.href);
+        document.getElementById('link_url').innerText = window.location.href;
+    </script>
 
 
             <div class="tag_share" style="display: block;">

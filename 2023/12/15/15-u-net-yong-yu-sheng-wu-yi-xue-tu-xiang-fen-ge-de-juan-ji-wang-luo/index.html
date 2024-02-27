@@ -591,12 +591,12 @@
                     
                     <div class="article-tag">
                         
-                            <a href="../../../../tags/PLIS/">
-                                <span class="chip bg-color">PLIS</span>
-                            </a>
-                        
                             <a href="../../../../tags/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/">
                                 <span class="chip bg-color">论文阅读</span>
+                            </a>
+                        
+                            <a href="../../../../tags/PLIS/">
+                                <span class="chip bg-color">PLIS</span>
                             </a>
                         
                     </div>
@@ -764,7 +764,7 @@ op: 1024x56x56 同层的512x64x64与512x56x56想结合并裁剪多余部分
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://jundecno.github.io">https://jundecno.github.io</a>
+                    <a id="link_url"></a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -783,7 +783,6 @@ op: 1024x56x56 同层的512x64x64与512x56x56想结合并裁剪多余部分
             </div>
         
     </div>
-
     <script async defer>
       document.addEventListener("copy", function (e) {
         let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
@@ -794,7 +793,10 @@ op: 1024x56x56 同层的512x64x64与512x56x56想结合并裁剪多余部分
         $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
       }
     </script>
-
+    <script>
+        document.getElementById('link_url').setAttribute('href', window.location.href);
+        document.getElementById('link_url').innerText = window.location.href;
+    </script>
 
 
             <div class="tag_share" style="display: block;">
@@ -802,12 +804,12 @@ op: 1024x56x56 同层的512x64x64与512x56x56想结合并裁剪多余部分
                     
                         <div class="article-tag">
                             
-                                <a href="../../../../tags/PLIS/">
-                                    <span class="chip bg-color">PLIS</span>
-                                </a>
-                            
                                 <a href="../../../../tags/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/">
                                     <span class="chip bg-color">论文阅读</span>
+                                </a>
+                            
+                                <a href="../../../../tags/PLIS/">
+                                    <span class="chip bg-color">PLIS</span>
                                 </a>
                             
                         </div>
@@ -1258,12 +1260,12 @@ op: 1024x56x56 同层的512x64x64与512x56x56想结合并裁剪多余部分
                 
                 <div class="card-action article-tags">
                     
-                    <a href="../../../../tags/PLIS/">
-                        <span class="chip bg-color">PLIS</span>
-                    </a>
-                    
                     <a href="../../../../tags/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/">
                         <span class="chip bg-color">论文阅读</span>
+                    </a>
+                    
+                    <a href="../../../../tags/PLIS/">
+                        <span class="chip bg-color">PLIS</span>
                     </a>
                     
                 </div>
