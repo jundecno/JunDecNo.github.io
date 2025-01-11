@@ -31,60 +31,6 @@
     
     
     <entry>
-      <title>15-U-Net 用于生物医学图像分割的卷积网络</title>
-      <link href="/2023/12/15/15-u-net-yong-yu-sheng-wu-yi-xue-tu-xiang-fen-ge-de-juan-ji-wang-luo/"/>
-      <url>/2023/12/15/15-u-net-yong-yu-sheng-wu-yi-xue-tu-xiang-fen-ge-de-juan-ji-wang-luo/</url>
-      
-        <content type="html"><![CDATA[<p>文章地址: <a href="https://link.springer.com/chapter/10.1007/978-3-319-24574-4_28">U-Net: Convolutional Networks for Biomedical Image Segmentation | SpringerLink</a></p><p><a href="#%E6%91%98%E8%A6%81%20Abstract">摘要</a></p><p><a href="#%E4%BB%8B%E7%BB%8D%20Introduction">介绍</a></p><p><a href="#%E6%9D%90%E6%96%99%E5%92%8C%E6%96%B9%E6%B3%95%20Materials%20and%20Methods">材料和方法</a></p><p><a href="#%E7%BB%93%E6%9E%9C%20Result">结果</a></p><p><a href="#%E6%80%BB%E7%BB%93%20Conclusion">总结</a></p><p><a href="#%E9%97%AE%E9%A2%98%20Question">问题</a></p><p><a href="#After">最后</a></p><h2 id="摘要-Abstract"><a href="#摘要-Abstract" class="headerlink" title="摘要 Abstract"></a>摘要 Abstract</h2><p>提出了一种网络和训练策略，该策略依赖于大量使用数据增强来更有效地使用可用的标注样本。对训练的样本进行增强</p><p>该体系结构由捕获上下文的收缩路径和支持精确本地化的对称扩展路径组成。此外，网络速度很快。在最新的GPU上，分割512x512图像只需不到一秒的时间。</p><p>code：<a href="http://lmb.informatik.uni-freiburg.de/people/ronneber/u-net">U-Net</a></p><h2 id="介绍-Introduction"><a href="#介绍-Introduction" class="headerlink" title="介绍 Introduction"></a>介绍 Introduction</h2><p>深度学习在参数和数据集大小上有一些限制，那么对于小样本的学习，就存在一些问题。</p><p>卷积网络的应用是在图像分类方面，但在生物医学图像处理方面，往往需要输出定位，对像素的类别标签，如果只有几k的图像，达不到训练的要求。</p><p>之后就出现了使用滑动窗口的形式去预测pixel的标签。滑动窗口也是一种数据增强的方式。数据可以大于训练的图像。sliding-window</p><p>缺点是对于补丁大小方面存在权衡。</p><h2 id="材料和方法-Materials-and-Methods"><a href="#材料和方法-Materials-and-Methods" class="headerlink" title="材料和方法 Materials and Methods"></a>材料和方法 Materials and Methods</h2><p>该体系结构进行了修改和扩展，使其能够处理非常少的训练图像，并产生更精确的分割</p><p><img src="https://cdn.jsdelivr.net/gh/jundecno/imagerepo@main/Blogs/MarkDown/202312151106207.png" alt="image.png"></p><blockquote><p>所以叫U-Net</p></blockquote><p>主要是通过连续的层补充收缩网络，池操作符用上采样操作符来代替。因此，这些层提高了输出的分辨率。为了定位，将收缩路径的高分辨率特征与上采样输出相结合。然后，连续的卷积层可以学习基于该信息组合更精确的输出。</p><p>如果将左边视作为编码，将右边视作为解码</p><p>同层编码也会输出到同层的解码，有种残差的味道</p><p>不存在全连接层。即仅存在卷积的操作。</p><pre><code>input: 572x572(通过镜像处理过的图片)op: 64x570x570 64个可学习的卷积核op: 64x568x568 64个可学习的卷积核op: 284x284    2x2池化...op: 32x32      2x2池化...op: 28x28      2x2池化op: 1024x56x56 同层的512x64x64与512x56x56想结合并裁剪多余部分...</code></pre><p>通过对可用的训练图像应用弹性变形来进行过度的数据增强。</p><p>模型近可能的去模拟生物领域组织的真实变形。</p><p>对于原始图片是512x512的尺寸，U-Net使用Overlay-tile Strategy对边缘进行非0填充。</p><p>Overlay-tile Strategy的目的是对更大的图做分割时可以无缝拼接？</p><p>572可以是的每次进行降采样后的尺寸都是偶数。</p><p>U-Net的损失函数是使用加权损失，其中接触单元之间分离的背景标签在损失函数中获得较大的权重。</p><p>能量函数通过pixel的softmax的交叉熵loss function计算。</p><p>$E=\sum_{\mathbf{x}\in\Omega}w(\mathbf{x})\mathrm{log}(p_{\ell(\mathbf{x})}(\mathbf{x}))$</p><p>$K$ is the number of classes and $p_k(x)$ is the approximated maximum-function.</p><p>每个类别的最大值函数与标签进行交叉熵。$w(x)$是权重，重点关注某些像素。</p><p>使用SGD方法</p><p>使用形态学运算计算分离边界。然后，权重图计算为：</p><p>$$</p><p>w(\mathbf{x})=w_c(\mathbf{x})+w_0\cdot\exp\left(-\frac{(d_1(\mathbf{x})+d_2(\mathbf{x}))^2}{2\sigma^2}\right)</p><p>$$</p><p>这里 $w_c:\Omega\in\mathbb{R}$ 是平衡类别比例的权值，$d_1:\Omega\in\mathbb{R}$ 是像素点到距离其最近的细胞的距离， $d_2:\Omega\in\mathbb{R}$ 则是像素点到距离其第二近的细胞的距离。$w_0$ 和 $\sigma$ 是常数值，在实验中 $w_0=10$</p><p> , $\sigma\approx5:。$ why?</p><p>文中对于模型描述的原话：</p><p>The network architecture is illustrated in Figure 1. It consists of a contracting path (left side) and an expansive path (right side). The contracting path follows the typical architecture of a convolutional network. It consists of the repeated application of two 3x3 convolutions (unpadded convolutions), each followed by a rectified linear unit (ReLU) and a 2x2 max pooling operation with stride 2 for downsampling. At each downsampling step we double the number of feature channels. Every step in the expansive path consists of an upsampling of the feature map followed by a 2x2 convolution (“up-convolution”) that halves the number of feature channels, a concatenation with the correspondingly cropped feature map from the contracting path, and two 3x3 convolutions, each followed by a ReLU. The cropping is necessary due to the loss of border pixels in every convolution. At the final layer a 1x1 convolution is used to map each 64-component feature vector to the desired number of classes. In total the network has 23 convolutional layers. To allow a seamless tiling of the output segmentation map (see Figure 2), it is important to select the input tile size such that all 2x2 max-pooling operations are applied to a layer with an even x- and y-size.</p><p>比如这是二分类，输入两个维度表示每个类别的情况。</p><p>文中使用随机位移向量在粗略的3x3网格上生成平滑变形。</p><h2 id="结果-Result"><a href="#结果-Result" class="headerlink" title="结果 Result"></a>结果 Result</h2><p>U-Net在医学图像分割方面效果很好。</p><h2 id="总结-Conclusion"><a href="#总结-Conclusion" class="headerlink" title="总结 Conclusion"></a>总结 Conclusion</h2><p>U-Net是比较早的使用多尺度特征进行语义分割任务的算法之一，其U形结构也启发了后面很多算法。但其也有几个缺点：</p><ol><li><p>有效卷积增加了模型设计的难度和普适性；目前很多算法直接采用了same卷积，这样也可以免去Feature Map合并之前的裁边操作</p></li><li><p>其通过裁边的形式和Feature Map并不是对称的，个人感觉采用双线性插值的效果应该会更好。</p></li></ol><h2 id="问题-Question"><a href="#问题-Question" class="headerlink" title="问题 Question"></a>问题 Question</h2><p>ISBI细胞跟踪挑战赛？</p><p>Overlay-tile Strategy？</p><p>EM stacks？</p><h2 id="After"><a href="#After" class="headerlink" title="After"></a>After</h2><h3 id="Results-Understanding"><a href="#Results-Understanding" class="headerlink" title="Results Understanding"></a>Results Understanding</h3><h3 id="Methods-Cracking"><a href="#Methods-Cracking" class="headerlink" title="Methods Cracking"></a>Methods Cracking</h3><h3 id="Enhancement-or-Improvement-Ideas"><a href="#Enhancement-or-Improvement-Ideas" class="headerlink" title="Enhancement or Improvement Ideas"></a>Enhancement or Improvement Ideas</h3><h3 id="Source-Code"><a href="#Source-Code" class="headerlink" title="Source Code"></a>Source Code</h3>]]></content>
-      
-      
-      <categories>
-          
-          <category> 科研论文 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 论文阅读 </tag>
-            
-            <tag> PLIS </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>12-GLPocket：蛋白质结合位点预测的多尺度表示学习方法</title>
-      <link href="/2023/12/14/12-glpocket-dan-bai-zhi-jie-he-wei-dian-yu-ce-de-duo-chi-du-biao-shi-xue-xi-fang-fa/"/>
-      <url>/2023/12/14/12-glpocket-dan-bai-zhi-jie-he-wei-dian-yu-ce-de-duo-chi-du-biao-shi-xue-xi-fang-fa/</url>
-      
-        <content type="html"><![CDATA[<p>文章地址: <a href="https://www.ijcai.org/proceedings/2023/0536.pdf">GLPocket: A Multi-Scale Representation Learning Approach for Protein Binding Site Prediction (ijcai.org)</a></p><h2 id="摘要-Abstract"><a href="#摘要-Abstract" class="headerlink" title="摘要 Abstract"></a>摘要 Abstract</h2><p>基于最小均方误差重构(LMSER)网络，并利用多尺度表示来预测结合位点。</p><p>首先，GLPocket使用目标裁剪块(TCB)进行目标预测。TCB从全局表示中选择局部感兴趣的特征进行集中预测。</p><h2 id="介绍-Introduction"><a href="#介绍-Introduction" class="headerlink" title="介绍 Introduction"></a>介绍 Introduction</h2><p>蛋白质结合位点主要是蛋白质种的深沟或者凹槽的形式（grooves or tunnels）问题研究的意义</p><p><strong>problem的困难之处</strong>：蛋白质表面凹凸不平，导致出现很多假阳的部位。直径相差比较大，导致预测困难。</p><p><strong>介绍相关工作</strong>：几何、模板、能量、机器学习、深度学习</p><ul><li><p>根据蛋白质的几何特征预测</p></li><li><p>从数据库中搜索最相似的蛋白质，分配给查询的蛋白质</p></li><li><p>最小相互作用能量预测[[13-AutoSite 一个自动化的方法基于配体结合的伪配体预测站点识别是预测的关键配位原子]]</p></li><li><p>使用物理和化学信息分配和标记口袋点数，用随机森林算法计算绑定分数。</p></li><li><p>DeepSite使用CNN进行处理预测，但都是局部，没到达体素级别，从蛋白质的三维坐标系出发？[[14-DeepSite 使用 3D 卷积神经网络的蛋白质结合位点预测器]]</p></li></ul><p>论文主要的改进就是在per-voxel的分类上，使用3D U-Net</p><p>存在使用整个蛋白质作为输入，另一个是以局部小范围残基作为输入，使用FPocket对多个进行预测，的到每个小范围的候选中心，使用这些候选中心作为输入。建立了解码器到编码器的反馈链路。</p><p>肯定了局部区域方法的合理性，但又没有考虑周围环境和全局信息。</p><p>是对全局和局部的权衡。</p><p>最小均方误差重构(LMSER)比U-Net更好。</p><p>论文主要的创新：</p><ul><li><p>使用LMSER来捕捉预测位点</p></li><li><p>使用蛋白质作为编码阶段的输入，获得全局表示</p></li><li><p>使用Transformer获取局部肽间的依赖</p></li><li><p>使用一种目标裁剪块来提取局部</p></li></ul><h2 id="材料和方法-Materials-and-Methods"><a href="#材料和方法-Materials-and-Methods" class="headerlink" title="材料和方法 Materials and Methods"></a>材料和方法 Materials and Methods</h2><p>四种Datasets <strong>scPDB COACH420 HOLOk PDBbind</strong></p><p><strong>Architecture of GLPocket</strong></p><p>编码模块、解码模块、目标裁剪模块和transformer模块。</p><p>使用不同的卷积核编码再加上残差。</p><p>从全局中获得局部的映射</p><p>我觉得最关键的就是Target Cropping Block (TCB)的作用</p><p>获取更多的邻域信息来增强提案的表示能力。</p><p>TCB从候选中心的周围作为局部提议，这就是候选中心之间会存在重复的区域。</p><p><img src="https://cdn.jsdelivr.net/gh/jundecno/imagerepo@main/Blogs/MarkDown/202312141510756.png" alt="image.png"></p><p>是对像素属于binding pocket的预测</p><p>三个Evaluation Metric</p><ul><li><p>DCA 是预测的口袋中心与最近的配体原子之间的距离。</p></li><li><p>DCC 是预测口袋中心与标签中心之间的距离。</p></li><li><p>DVO 是预测的pocket和对应的标签的重叠与它们的体积并集的比率。</p></li></ul><h2 id="结果-Result"><a href="#结果-Result" class="headerlink" title="结果 Result"></a>结果 Result</h2><p>通过消融实验验证了TCB和Tranformer的作用。</p><h2 id="总结-Conclusion"><a href="#总结-Conclusion" class="headerlink" title="总结 Conclusion"></a>总结 Conclusion</h2><p>在本文中，我们提出了一种基于Lmser的网络结构GLPocket，用于捕获对象的多尺度表示以预测结合位点。我们设计了目标裁剪块(TCB)，从全局表示中选择感兴趣的局部特征进行目标预测。TCB融合了全局分布信息，使得局部区域表示具有更强的区分性，使预测更加集中和准确。TCB还在不引入额外参数的情况下，将要计算的特征映射的体积大大减少了82%。</p><h2 id="问题-Question"><a href="#问题-Question" class="headerlink" title="问题 Question"></a>问题 Question</h2><p>多尺度表示学习方法是什么？[[00-PaperQuestion#多尺度表示学习]]</p><p>3D UNet是什么？ [[00-PaperQuestion#3D UNet]]</p><p>最小均方误差重构(LMSER)是什么？[[00-PaperQuestion#LMSER]]</p><h2 id="After"><a href="#After" class="headerlink" title="After"></a>After</h2><h3 id="Results-Understanding"><a href="#Results-Understanding" class="headerlink" title="Results Understanding"></a>Results Understanding</h3><p>Transformer是有较大的作用的</p><p>TCB是一种获得邻域的方式</p><h3 id="Methods-Cracking"><a href="#Methods-Cracking" class="headerlink" title="Methods Cracking"></a>Methods Cracking</h3><p>从像素级别进行判断是否合理？和生化性质有一定的区别。</p><h3 id="Enhancement-or-Improvement-Ideas"><a href="#Enhancement-or-Improvement-Ideas" class="headerlink" title="Enhancement or Improvement Ideas"></a>Enhancement or Improvement Ideas</h3><p>全局和局部结合是提高的一种方式</p><p>将模型结合生化性质可能也是一种改进方向</p><h3 id="Source-Code"><a href="#Source-Code" class="headerlink" title="Source Code"></a>Source Code</h3><pre class=" language-python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">clip</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> data_x<span class="token punctuation">,</span> f<span class="token punctuation">,</span> condidate_center<span class="token punctuation">,</span> a1a2<span class="token punctuation">)</span><span class="token punctuation">:</span>        center <span class="token operator">=</span> condidate_center <span class="token operator">/</span> f        <span class="token comment" spellcheck="true"># block_list = []</span>        a1<span class="token punctuation">,</span> a2 <span class="token operator">=</span> a1a2        min_center <span class="token operator">=</span> <span class="token punctuation">(</span>center <span class="token operator">-</span> a1<span class="token punctuation">)</span><span class="token punctuation">.</span>int<span class="token punctuation">(</span><span class="token punctuation">)</span>        max_center <span class="token operator">=</span> <span class="token punctuation">(</span>center <span class="token operator">+</span> a2<span class="token punctuation">)</span><span class="token punctuation">.</span>int<span class="token punctuation">(</span><span class="token punctuation">)</span>        x1<span class="token punctuation">,</span> y1<span class="token punctuation">,</span> z1 <span class="token operator">=</span> min_center<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span>        x2<span class="token punctuation">,</span> y2<span class="token punctuation">,</span> z2 <span class="token operator">=</span> max_center<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span>        <span class="token comment" spellcheck="true"># print(center)</span>        <span class="token comment" spellcheck="true"># print('a1={} a2={}'.format(a1, a2))</span>        <span class="token comment" spellcheck="true"># print('x1,y1,z1=', x1, y1, z1)</span>        <span class="token comment" spellcheck="true"># print('x2,y2,z2=', x2, y2, z2)</span>        batch_block <span class="token operator">=</span> data_x<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">,</span> <span class="token punctuation">:</span><span class="token punctuation">,</span> x1<span class="token punctuation">:</span> x2 <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">,</span> y1<span class="token punctuation">:</span> y2 <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">,</span> z1<span class="token punctuation">:</span>z2 <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">]</span>        <span class="token keyword">return</span> batch_block</code></pre><blockquote><p>其实就是根据中心划分周围区域的一种方式</p></blockquote>]]></content>
-      
-      
-      <categories>
-          
-          <category> 科研论文 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 论文阅读 </tag>
-            
-            <tag> PLIS </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>Docker的基本使用</title>
       <link href="/2023/10/08/docker-de-ji-ben-shi-yong/"/>
       <url>/2023/10/08/docker-de-ji-ben-shi-yong/</url>
@@ -101,11 +47,11 @@
       
         <tags>
             
+            <tag> Docker </tag>
+            
             <tag> 工具使用 </tag>
             
             <tag> 基本使用 </tag>
-            
-            <tag> Docker </tag>
             
         </tags>
       
@@ -130,11 +76,40 @@
       
         <tags>
             
+            <tag> 工具使用 </tag>
+            
+            <tag> 基本使用 </tag>
+            
             <tag> Zotero </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Hexo+github个人博客搭建</title>
+      <link href="/2022/07/10/hexo-github-ge-ren-bo-ke-da-jian/"/>
+      <url>/2022/07/10/hexo-github-ge-ren-bo-ke-da-jian/</url>
+      
+        <content type="html"><![CDATA[<p>1.安装Node.js和Git<br>Node.js有很多教程,如果官网下载速度慢,可以在这里下载,提醒大家一下,建议大家将修改node_global和node_cache,不然会占用C盘空间,而且不利于查看</p><p><a href="https://git-scm.com/downloads/win">Git</a>在这里下载,相关使用就不多说明了</p><p>2.搭建仓库<br>如果Github访问不了,可以下载Steam++,加速很有效果</p><p>之后新建仓库</p><p><img src="https://cdn.jsdelivr.net/gh/jundecno/imagerepo@main/Blogs/MarkDown/202501112109359.png"><br>这里的仓库名必须要是你的用户名+.github.io,就是归属的名字,一定一定要是这个,不然会错.</p><p>3.生成SSH key<br>在本地创建一个文件夹,在文件夹里右键打开Git Bush here</p><p>输入 ssh keygen -t rsa -C “你的Github的邮箱名”,一直回车就可以了.</p><p>之后在用户目录下的.ssh文件下生产id_rsa.pub和id_rsa</p><p>我们复制id_rsa.pub里的内容</p><p><img src="https://cdn.jsdelivr.net/gh/jundecno/imagerepo@main/Blogs/MarkDown/202501112110954.png"><br>新建SSH key将复制信息粘贴即可,不要动任何空格之类的信息</p><p>可以使用ssh-keygen -t <a href="mailto:git@github.com">git@github.com</a>测试是否成功</p><p>4.生产本地博客<br>1.安装hexo</p><pre class=" language-sh"><code class="language-sh">npm install -g hexo</code></pre><p>2.运行hexo<br>分别执行下列指令</p><pre class=" language-sh"><code class="language-sh">hexo inithexo ghexo s </code></pre><p>5.使用github 仓库<br>打开生成的hexo的_config.yml,这个文件是配置文件.</p><p>修改deploy</p><pre class=" language-yaml"><code class="language-yaml"><span class="token key atrule">deploy</span><span class="token punctuation">:</span>  <span class="token key atrule">type</span><span class="token punctuation">:</span> git  <span class="token key atrule">repository</span><span class="token punctuation">:</span> https<span class="token punctuation">:</span>//github.com/XifaNiu/XiFaNiu.github.io.git&lt;这里是你仓库的地址<span class="token punctuation">></span>  <span class="token key atrule">branch</span><span class="token punctuation">:</span> master&lt;是你默认分支的地址<span class="token punctuation">></span></code></pre><p>在这里查看</p><p><img src="https://cdn.jsdelivr.net/gh/jundecno/imagerepo@main/Blogs/MarkDown/202501112113884.png"><br>安装hexo自动部署工具</p><p>使用命令</p><pre class=" language-sh"><code class="language-sh">npm install hexo-deployer-git --save</code></pre><p>使用hexo d即可完成部署,会出现登录github的窗口,登录就可以了,登录你的网址,比如我的是xifaniu.github.io</p><p><img src="https://cdn.jsdelivr.net/gh/jundecno/imagerepo@main/Blogs/MarkDown/202501112106256.png"><br>恭喜大家!</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 工具使用 </category>
+          
+      </categories>
+      
+      
+        <tags>
             
             <tag> 工具使用 </tag>
             
             <tag> 基本使用 </tag>
+            
+            <tag> Hexo </tag>
             
         </tags>
       
